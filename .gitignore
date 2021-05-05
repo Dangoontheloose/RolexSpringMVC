@@ -5,9 +5,8 @@
 
 # Intellij
 .idea/
-*.iml
 *.iws
-
+*.iml
 # Mac
 .DS_Store
 
@@ -15,4 +14,3 @@
 log/
 target/
 classes/
-*.iml
