@@ -4,9 +4,10 @@ public class Customer {
     public String name;
     public int age;
 
-    public Customer(){}
+    public Customer() {
+    }
 
-    public Customer(String name, int age){
+    public Customer(String name, int age) {
         this.name = name;
         this.age = age;
     }
@@ -22,6 +23,7 @@ public class Customer {
     public String getName() {
         return this.name;
     }
+
     public int getAge() {
         return this.age;
     }

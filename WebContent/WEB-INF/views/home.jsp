@@ -2,10 +2,9 @@
 <%@ page session="false" %>
 <html>
     <head>
-        <title>JavaCodeGeeks: Spring MVC</title>
+        <title>Home Page</title>
     </head>
     <body>
-        <h1>Welcome Spring MVC</h1>
-        <p>Hello JavaCodeGeeks!</p>
+        <h1>Rolex Spring MVC</h1>
     </body>
 </html>
