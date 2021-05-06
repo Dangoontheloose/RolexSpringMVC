@@ -24,4 +24,16 @@ public class CustomerController {
         model.addAttribute("customerList", customerRepository.getCustomerList());
         return "customer-list";
     }
+    @RequestMapping(value = "/customer-details", method = RequestMethod.GET)
+    public String customerDetails(Model model) {
+        model.addAttribute("customerDetails", customerRepository.getCustomerDetails());
+        return "customer-details";
+    }
+
+    @RequestMapping(value = "/product-details", method = RequestMethod.GET)
+    public String productDetails(Model model) {
+        model.addAttribute("productDetails", customerRepository.getFirstProduct());
+        return "product-details";
+    }
+
 }
