@@ -41,6 +41,13 @@
       <artifactId>jstl</artifactId>
       <version>1.2</version>
     </dependency>
+<!--    Data Annotations With Hibernate-->
+    <dependency>
+      <groupId>org.hibernate</groupId>
+      <artifactId>hibernate-core</artifactId>
+      <version>5.2.11.Final</version>
+    </dependency>
+<!--    MongoDB dependencies-->
     <dependency>
       <groupId>org.springframework.data</groupId>
       <artifactId>spring-data-mongodb</artifactId>
