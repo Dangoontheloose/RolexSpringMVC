@@ -1,9 +1,5 @@
 package com.rolex.web.model;
 
-import javax.persistence.Entity;
-import javax.persistence.ManyToOne;
-
-@Entity
 public class Customer {
     private String customerID;
     private String address;
@@ -11,10 +7,9 @@ public class Customer {
     private String password;
     private String phoneNum;
     private String name;
+
     private int accountTypeID;
 
-//    @ManyToOne
-//    private AccountType accountType;
 
     public Customer() {
     }
@@ -61,5 +56,21 @@ public class Customer {
 
     public void setPassword(String password) {
         this.password = password;
+    }
+
+    public String getCustomerID() {
+        return customerID;
+    }
+
+    public void setCustomerID(String customerID) {
+        this.customerID = customerID;
+    }
+
+    public int getAccountTypeID() {
+        return accountTypeID;
+    }
+
+    public void setAccountTypeID(int accountTypeID) {
+        this.accountTypeID = accountTypeID;
     }
 }
