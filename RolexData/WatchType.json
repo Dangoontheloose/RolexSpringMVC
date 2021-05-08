@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "60958086569db874b66e974b"
+  },
+  "watchTypeID": 1,
+  "watchTypeValue": "Men's"
+},{
+  "_id": {
+    "$oid": "609580b621441a1be8f5790e"
+  },
+  "watchTypeID": 2,
+  "watchTypeValue": "Ladies'"
+}]
