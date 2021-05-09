@@ -58,16 +58,18 @@
       <artifactId>mongo-java-driver</artifactId>
       <version>3.12.8</version>
     </dependency>
+<!--Thymeleaf Template Engine-->
 <!--    <dependency>-->
-<!--      <groupId>org.mongodb</groupId>-->
-<!--      <artifactId>bson</artifactId>-->
-<!--      <version>4.2.3</version>-->
+<!--      <groupId>org.thymeleaf</groupId>-->
+<!--      <artifactId>thymeleaf</artifactId>-->
+<!--      <version>3.0.12.RELEASE</version>-->
 <!--    </dependency>-->
 <!--    <dependency>-->
-<!--      <groupId>org.mongodb</groupId>-->
-<!--      <artifactId>mongodb-driver-sync</artifactId>-->
-<!--      <version>4.2.3</version>-->
+<!--      <groupId>org.thymeleaf</groupId>-->
+<!--      <artifactId>thymeleaf-spring5</artifactId>-->
+<!--      <version>3.0.12.RELEASE</version>-->
 <!--    </dependency>-->
+<!--Javax-->
     <dependency>
       <groupId>javax.xml.bind</groupId>
       <artifactId>jaxb-api</artifactId>
@@ -79,6 +81,7 @@
   <build>
     <plugins>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-compiler-plugin</artifactId>
         <version>3.8.1</version>
         <configuration>
@@ -87,6 +90,7 @@
         </configuration>
       </plugin>
       <plugin>
+        <groupId>org.apache.maven.plugins</groupId>
         <artifactId>maven-war-plugin</artifactId>
         <version>3.2.2</version>
         <configuration>
