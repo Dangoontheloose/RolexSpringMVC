@@ -12,11 +12,15 @@
     <title>Title</title>
 </head>
 <body>
+<table>
 <c:forEach var="customer" items="${customerList}">
     <tr>
-        <td>${customer.name}</td>
-        <td>${customer.age}</td>
+        <td>${customer.email}</td>
+    </tr>
+    <tr>
+        <td>${customer.address}</td>
     </tr>
 </c:forEach>
+</table>
 </body>
 </html>
