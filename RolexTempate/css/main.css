@@ -1,0 +1,232 @@
+/* Global reset css */
+h4,
+h5,
+h6,
+h1,
+h2,
+h3 {
+  margin-top: 0;
+}
+ul,
+ol {
+  margin: 0;
+}
+p {
+  margin: 0;
+}
+html,
+body {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 100%;
+  background: #fff;
+}
+/* Header */
+.banner {
+  background: url(https://static.fratello.com/2019/04/Rolex-Submariner-2.jpg)
+    no-repeat center top;
+  background-size: cover;
+  min-height: 800px;
+  text-align: center;
+  padding-top: 1em;
+}
+.header_top_left {
+  float: left;
+}
+.header_top_right {
+  float: right;
+  width: 25%;
+}
+.box {
+  cursor: pointer;
+  padding: 5px 10px;
+  background: #f9d9be;
+  margin-top: 10px;
+  float: left;
+}
+.box a:hover {
+  text-decoration: none;
+  color: #000;
+}
+.box h4 {
+  border: none;
+  color: #fff;
+  font-size: 0.85em;
+  margin-bottom: 0;
+  padding: 0;
+}
+.box p {
+  float: left;
+  margin: 6px 0 0 0;
+  color: #000;
+}
+ul.header_user_info {
+  float: left;
+  border-right: 1px solid #555;
+  width: 50%;
+  padding: 0;
+  min-height: 30px;
+}
+ul.header_user_info a {
+  color: #fff;
+}
+ul.header_user_info a:hover {
+  color: #fd926d;
+}
+ul.header_user_info a:hover {
+  text-decoration: none;
+  color: #fd926d;
+}
+i.user {
+  width: 17px;
+  height: 17px;
+  background: url(../images/img-sprite.png) no-repeat -241px -67px;
+  float: left;
+  margin: 6px 10px 0 5px;
+}
+ul.header_user_info li.user_desc {
+  display: block;
+  font-size: 12px;
+  text-transform: uppercase;
+  cursor: pointer;
+  /* background: #fb5c22; */
+  transition: all 0.2s linear;
+  float: left;
+  margin-top: 6px;
+}
+.search-box {
+  position: relative;
+}
+.sb-search {
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  width: 0%;
+  min-width: 30px;
+  height: 28px;
+  float: right;
+  /* overflow: hidden; */
+  /* transition: width 0.3s; */
+}
+.sb-search-input {
+  position: absolute;
+  right: 20px;
+  border: none;
+  outline: none;
+  background: #555;
+  width: 115px;
+  height: 28px;
+  margin: 0;
+  /* z-index: 10; */
+  padding: 5px 10px;
+  font-size: 13px;
+  color: #ffffff;
+}
+.sb-icon-search,
+.sb-search-submit {
+  width: 30px;
+  height: 28px;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0;
+  margin: 0;
+  line-height: 45px;
+  text-align: center;
+  cursor: pointer;
+}
+.sb-search-submit {
+  background: #333 url("../images/search.png") no-repeat 0px 1px;
+  color: transparent;
+  border: none;
+  outline: none;
+  z-index: -1;
+}
+.sb-icon-search {
+  color: #fff;
+  background: #000 url("../images/search.png") no-repeat 7px 5px;
+  z-index: 90;
+}
+.sb-search.sb-search-open,
+.no-js .sb-search {
+  width: 100%;
+}
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+  z-index: 90;
+}
+.header_bottom {
+  padding: 2em 0;
+}
+span.m_1 {
+  color: #f9d9be;
+}
+.logo {
+  float: left;
+  margin-right: 2em;
+}
+.logo h1 a {
+  color: #fff;
+}
+.logo h1 a:hover {
+  text-decoration: none;
+}
+
+.h_nav ul li a {
+  display: block;
+  font-size: 0.85em;
+  color: #555;
+  text-transform: capitalize;
+  /* line-height: 1.8em; */
+  line-height: 2.5em;
+}
+.h_nav ul li a:hover {
+  text-decoration: none;
+  color: #f84545;
+}
+.h_nav h4 {
+  font-size: 1em;
+  color: #000;
+  line-height: 1.8em;
+  text-transform: uppercase;
+  margin-bottom: 1em;
+}
+.menu {
+  float: right;
+  margin: 7px 0 0 0;
+}
+.megamenu {
+  margin-bottom: 0px;
+  padding: 0;
+  width: 100%;
+  list-style: none;
+  display: inline-block;
+  position: relative;
+  font-size: 15px;
+}
+.megamenu li {
+  margin-bottom: -5px;
+  display: inline;
+  padding-right: 20px;
+}
+.megamenu > li > a {
+  float: left;
+  padding: 8px 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  transition: all 0.3s ease-in-out;
+  color: #fff;
+  letter-spacing: 5px;
+  font-weight: 400;
+}
+.megamenu > li:hover > a {
+  color: #f9d9be;
+}
+.megamenu > li.active > a {
+  color: #f9d9be;
+}
+.megamenu > li.right {
+  float: right;
+}
