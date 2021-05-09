@@ -230,3 +230,92 @@ span.m_1 {
 .megamenu > li.right {
   float: right;
 }
+.infor-left h3 {
+  font-size: 1.5em;
+  color: #000;
+  margin: 0 0 0 0;
+  font-family: "BreeSerif-Regular";
+}
+.infor-left ul li a span {
+  background: url(../images/s-icons.png) no-repeat;
+  width: 34px;
+  height: 34px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.infor-left ul li a span:hover {
+  transition: 0.5s all;
+  transform: rotatey(360deg);
+}
+.infor-left ul li a span.fb {
+  background-position: 0px 0px;
+}
+.infor-left ul li a span.twit {
+  background-position: -34px 0px;
+}
+.infor-left ul li a span.google {
+  background-position: -68px 0px;
+}
+.infor-left ul {
+  padding: 0;
+  margin: 25px 0 0 0;
+}
+.infor-left ul li {
+  display: block;
+  list-style: none;
+  margin-top: 10px;
+}
+.infor-left ul li:nth-child(1) {
+  margin-top: 0;
+}
+.infor-left ul li a h6 {
+  color: #000;
+  font-size: 13px;
+  font-family: "BreeSerif-Regular";
+  margin: 0 0 0 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.infor-left ul li a h6:hover {
+  color: #f9d9be;
+}
+.infor-left ul li a p {
+  color: #000;
+  font-size: 13px;
+  margin: 0;
+}
+.infor-left ul li a p:hover {
+  color: #f9d9be;
+}
+.infor-left ul li a:hover {
+  text-decoration: none;
+}
+.infor-left h4 {
+  color: #000;
+  font-size: 13px;
+  margin: 20px 0 0 0;
+}
+.infor-left h4 span {
+  display: block;
+  margin: 7px 0;
+}
+.infor-left h5 {
+  font-size: 15px;
+  color: #000;
+  margin: 19px 0 0 0;
+}
+.infor-left p a {
+  font-size: 13px;
+  color: #000;
+}
+.infor-left p a:hover {
+  color: #f9d9be;
+  text-decoration: none;
+}
+.infor-left p {
+  margin: 6px 0 0 0;
+}
+.infor-top {
+  border-bottom: 1px solid #dedede;
+  padding-bottom: 3em;
+}
