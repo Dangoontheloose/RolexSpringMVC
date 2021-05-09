@@ -230,6 +230,7 @@ span.m_1 {
 .megamenu > li.right {
   float: right;
 }
+/* Footer */
 .infor-left h3 {
   font-size: 1.5em;
   color: #000;
@@ -318,4 +319,63 @@ span.m_1 {
 .infor-top {
   border-bottom: 1px solid #dedede;
   padding-bottom: 3em;
+}
+/* Register */
+.register-top-grid h2,
+.register-bottom-grid h2 {
+  color: #000;
+  font-size: 1.5em;
+  padding-bottom: 1em;
+  margin: 0;
+}
+.register-top-grid div,
+.register-bottom-grid div {
+  width: 48%;
+  float: left;
+  margin: 10px 0;
+}
+.register-top-grid span,
+.register-bottom-grid span {
+  color: #999;
+  font-size: 0.85em;
+  padding-bottom: 0.2em;
+  display: block;
+  text-transform: uppercase;
+}
+.register-top-grid input[type="text"],
+.register-top-grid input[type="email"],
+.register-bottom-grid input[type="password"] {
+  border: 1px solid #eee;
+  outline-color: #ff5b36;
+  width: 96%;
+  font-size: 1em;
+  padding: 0.5em;
+}
+.register-button {
+  margin-top: 1em;
+}
+.register-button form input[type="submit"] {
+  background: #f9d9be;
+  color: #000;
+  font-size: 1em;
+  padding: 0.8em 2em;
+  transition: 0.5s all;
+  display: inline-block;
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+}
+.register-button form input[type="submit"]:hover {
+  background: #000;
+  color: #fff;
+}
+.news-letter {
+  color: #555;
+  font-weight: 600;
+  font-size: 0.85em;
+  margin-bottom: 1em;
+  display: block;
+  text-transform: uppercase;
+  transition: 0.5s all;
+  clear: both;
 }
