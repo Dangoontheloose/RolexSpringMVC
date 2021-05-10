@@ -1,0 +1,1034 @@
+/* Global reset css */
+h4,
+h5,
+h6,
+h1,
+h2,
+h3 {
+    margin-top: 0;
+}
+ul,
+ol {
+    margin: 0;
+}
+p {
+    margin: 0;
+}
+html{
+    margin: 0;
+    padding: 0;
+}
+html,
+body {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 100%;
+    background: #fff;
+}
+/* Header */
+.banner {
+    background: url(https://static.fratello.com/2019/04/Rolex-Submariner-2.jpg)
+    no-repeat center top;
+    background-size: cover;
+    min-height: 800px;
+    text-align: center;
+    /*padding-top: 1em;*/
+}
+.header_top_left {
+    float: left;
+}
+.header_top_right {
+    float: right;
+    width: 25%;
+}
+.box {
+    cursor: pointer;
+    padding: 5px 10px;
+    background: #f9d9be;
+    margin-top: 10px;
+    float: left;
+}
+.box a:hover {
+    text-decoration: none;
+    color: #000;
+}
+.box h4 {
+    border: none;
+    color: #fff;
+    font-size: 0.85em;
+    margin-bottom: 0;
+    padding: 0;
+}
+.box p {
+    float: left;
+    margin: 6px 0 0 0;
+    color: #000;
+}
+ul.header_user_info {
+    float: left;
+    border-right: 1px solid #555;
+    width: 50%;
+    padding: 0;
+    min-height: 30px;
+}
+ul.header_user_info a {
+    color: #fff;
+}
+ul.header_user_info a:hover {
+    color: #fd926d;
+}
+ul.header_user_info a:hover {
+    text-decoration: none;
+    color: #fd926d;
+}
+i.user {
+    width: 17px;
+    height: 17px;
+    background: url(http://localhost:8080/rolex/resources/images/img-sprite.png) no-repeat -241px -67px;
+    float: left;
+    margin: 6px 10px 0 5px;
+}
+ul.header_user_info li.user_desc {
+    display: block;
+    font-size: 12px;
+    text-transform: uppercase;
+    cursor: pointer;
+    /* background: #fb5c22; */
+    transition: all 0.2s linear;
+    float: left;
+    margin-top: 6px;
+}
+.search-box {
+    position: relative;
+}
+.sb-search {
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    min-width: 30px;
+    height: 28px;
+    float: right;
+    /* overflow: hidden; */
+    /* transition: width 0.3s; */
+}
+.sb-search-input {
+    position: absolute;
+    right: 20px;
+    border: none;
+    outline: none;
+    background: #555;
+    width: 115px;
+    height: 28px;
+    margin: 0;
+    /* z-index: 10; */
+    padding: 5px 10px;
+    font-size: 13px;
+    color: #ffffff;
+}
+.sb-icon-search,
+.sb-search-submit {
+    width: 30px;
+    height: 28px;
+    display: block;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 0;
+    margin: 0;
+    line-height: 45px;
+    text-align: center;
+    cursor: pointer;
+}
+.sb-search-submit {
+    background: #333 url("http://localhost:8080/rolex/resources/images/search.png") no-repeat 0px 1px;
+    color: transparent;
+    border: none;
+    outline: none;
+    z-index: -1;
+}
+.sb-icon-search {
+    color: #fff;
+    background: #000 url("http://localhost:8080/rolex/resources/images/search.png") no-repeat 7px 5px;
+    z-index: 90;
+}
+.sb-search.sb-search-open,
+.no-js .sb-search {
+    width: 100%;
+}
+.sb-search.sb-search-open .sb-search-submit,
+.no-js .sb-search .sb-search-submit {
+    z-index: 90;
+}
+.header_bottom {
+    padding: 2em 0;
+}
+span.m_1 {
+    color: #f9d9be;
+}
+.logo {
+    float: left;
+    margin-right: 2em;
+}
+.logo h1 a {
+    color: #fff;
+}
+.logo h1 a:hover {
+    text-decoration: none;
+}
+
+.h_nav ul li a {
+    display: block;
+    font-size: 0.85em;
+    color: #555;
+    text-transform: capitalize;
+    /* line-height: 1.8em; */
+    line-height: 2.5em;
+}
+.h_nav ul li a:hover {
+    text-decoration: none;
+    color: #f84545;
+}
+.h_nav h4 {
+    font-size: 1em;
+    color: #000;
+    line-height: 1.8em;
+    text-transform: uppercase;
+    margin-bottom: 1em;
+}
+.menu {
+    float: right;
+    margin: 7px 0 0 0;
+}
+.megamenu {
+    margin-bottom: 0px;
+    padding: 0;
+    width: 100%;
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    font-size: 15px;
+}
+.megamenu li {
+    margin-bottom: -5px;
+    display: inline;
+    padding-right: 20px;
+}
+.megamenu > li > a {
+    float: left;
+    padding: 8px 20px;
+    text-decoration: none;
+    text-transform: capitalize;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    transition: all 0.3s ease-in-out;
+    color: #fff;
+    letter-spacing: 5px;
+    font-weight: 400;
+}
+.megamenu > li:hover > a {
+    color: #f9d9be;
+}
+.megamenu > li.active > a {
+    color: #f9d9be;
+}
+.megamenu > li.right {
+    float: right;
+}
+/* Footer */
+.infor-left h3 {
+    font-size: 1.5em;
+    color: #000;
+    margin: 0 0 0 0;
+    font-family: "BreeSerif-Regular";
+}
+.infor-left ul li a span {
+    background: url(http://localhost:8080/rolex/resources/images/s-icons.png) no-repeat;
+    width: 34px;
+    height: 34px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.infor-left ul li a span:hover {
+    transition: 0.5s all;
+    transform: rotatey(360deg);
+}
+.infor-left ul li a span.fb {
+    background-position: 0px 0px;
+}
+.infor-left ul li a span.twit {
+    background-position: -34px 0px;
+}
+.infor-left ul li a span.google {
+    background-position: -68px 0px;
+}
+.infor-left ul {
+    padding: 0;
+    margin: 25px 0 0 0;
+}
+.infor-left ul li {
+    display: block;
+    list-style: none;
+    margin-top: 10px;
+}
+.infor-left ul li:nth-child(1) {
+    margin-top: 0;
+}
+.infor-left ul li a h6 {
+    color: #000;
+    font-size: 13px;
+    font-family: "BreeSerif-Regular";
+    margin: 0 0 0 10px;
+    display: inline-block;
+    vertical-align: middle;
+}
+.infor-left ul li a h6:hover {
+    color: #f9d9be;
+}
+.infor-left ul li a p {
+    color: #000;
+    font-size: 13px;
+    margin: 0;
+}
+.infor-left ul li a p:hover {
+    color: #f9d9be;
+}
+.infor-left ul li a:hover {
+    text-decoration: none;
+}
+.infor-left h4 {
+    color: #000;
+    font-size: 13px;
+    margin: 20px 0 0 0;
+}
+.infor-left h4 span {
+    display: block;
+    margin: 7px 0;
+}
+.infor-left h5 {
+    font-size: 15px;
+    color: #000;
+    margin: 19px 0 0 0;
+}
+.infor-left p a {
+    font-size: 13px;
+    color: #000;
+}
+.infor-left p a:hover {
+    color: #f9d9be;
+    text-decoration: none;
+}
+.infor-left p {
+    margin: 6px 0 0 0;
+}
+.infor-top {
+    border-bottom: 1px solid #dedede;
+    padding-bottom: 3em;
+}
+/* Register */
+.register-top-grid h2,
+.register-bottom-grid h2 {
+    color: #000;
+    font-size: 1.5em;
+    padding-bottom: 1em;
+    margin: 0;
+}
+.register-top-grid div,
+.register-bottom-grid div {
+    width: 48%;
+    float: left;
+    margin: 10px 0;
+}
+.register-top-grid span,
+.register-bottom-grid span {
+    color: #999;
+    font-size: 0.85em;
+    padding-bottom: 0.2em;
+    display: block;
+    text-transform: uppercase;
+}
+.register-top-grid input[type="text"],
+.register-top-grid input[type="email"],
+.register-bottom-grid input[type="password"] {
+    border: 1px solid #eee;
+    outline-color: #ff5b36;
+    width: 96%;
+    font-size: 1em;
+    padding: 0.5em;
+}
+.register-button {
+    margin-top: 1em;
+}
+.register-button form input[type="submit"] {
+    background: #f9d9be;
+    color: #000;
+    font-size: 1em;
+    padding: 0.8em 2em;
+    transition: 0.5s all;
+    display: inline-block;
+    text-transform: uppercase;
+    border: none;
+    outline: none;
+}
+.register-button form input[type="submit"]:hover {
+    background: #000;
+    color: #fff;
+}
+.news-letter {
+    color: #555;
+    font-weight: 600;
+    font-size: 0.85em;
+    margin-bottom: 1em;
+    display: block;
+    text-transform: uppercase;
+    transition: 0.5s all;
+    clear: both;
+}
+/* Login */
+.account-in {
+    padding: 5em 0;
+}
+.account-top span {
+    font-size: 1em;
+    color: #999;
+    display: block;
+    line-height: 2em;
+}
+.account-top input[type="text"],
+.account-top input[type="password"] {
+    padding: 0.7em;
+    width: 85%;
+    background: none;
+    border: 1px solid #d1d1d1;
+    outline: none;
+    color: #464646;
+    font-size: 1em;
+}
+.account-top input[type="submit"] {
+    background: #f9d9be;
+    color: #000;
+    font-size: 1.1em;
+    border: none;
+    outline: none;
+    border-radius: 2px;
+    padding: 0.4em 1.3em;
+    transition: 0.5s all;
+}
+.account-top div {
+    margin-bottom: 1em;
+}
+.account-top input[type="submit"]:hover,
+.register-but form input[type="submit"]:hover {
+    background: #000;
+    color: #fff;
+}
+/* Product */
+.product {
+    padding: 6em 0px;
+}
+.product-one:nth-child(2) {
+    margin-top: 30px;
+}
+.product-left {
+    text-align: center;
+}
+.prdt-left {
+    margin-top: 2em;
+}
+.product-left:hover .product-bottom h4 i {
+    background: url(http://localhost:8080/rolex/resources/images/cart-3.png) no-repeat;
+}
+.product-left:hover img.zoom-img {
+    overflow: hidden;
+    cursor: pointer;
+}
+.product-left:hover .product-bottom h3 {
+    color: #73b6e1;
+    transition: 0.5s all ease;
+}
+.product-left:hover .product-bottom h4 span {
+    color: #73b6e1;
+    transition: 0.5s all ease;
+}
+.product-left:hover .product-main {
+    border: 1px solid #73b6e1;
+    transition: 0.5s all ease;
+}
+.product-left:hover .srch {
+    display: block;
+}
+.product-main {
+    padding: 1em 0px 2.7em 0px;
+    border: 1px solid #eceaea;
+    margin: 10px 0;
+}
+a.mask {
+    text-decoration: none;
+    overflow: hidden;
+    display: block;
+    padding: 12px 0px;
+}
+img.zoom-img {
+    margin: 0 auto;
+}
+.product-left:hover img.zoom-img {
+    overflow: hidden;
+    cursor: pointer;
+}
+.item_add {
+    color: #fff;
+    border: none;
+}
+.product-bottom h3 {
+    font-size: 16px;
+    color: #000;
+    margin: 0;
+    text-transform: uppercase;
+    font-family: "BreeSerif-Regular";
+}
+.product-bottom h4 span {
+    font-size: 17px;
+    color: #000;
+    margin: 5px 0 0 0;
+    font-family: "BreeSerif-Regular";
+}
+.product-bottom h4 i {
+    background: url(http://localhost:8080/rolex/resources/images/cart-2.png) no-repeat;
+    width: 20px;
+    height: 15px;
+    display: inline-block;
+    margin-right: 4px;
+    vertical-align: middle;
+}
+.prdt-right {
+    margin-top: 2.6em;
+}
+.w_sidebar {
+    border: 1px solid #ebebeb;
+}
+.w_sidebar h3 {
+    padding: 0 20px 10px;
+    font-size: 1em;
+    color: #555555;
+    text-transform: uppercase;
+}
+.sky-form .label {
+    display: block;
+    margin-bottom: 6px;
+    line-height: 19px;
+}
+.sky-form {
+    margin-top: -10px;
+}
+.row1 {
+    outline: none;
+    padding: 20px;
+    overflow: auto;
+    height: 155px;
+}
+.row2 {
+    height: 175px;
+}
+.sky-form.col.col-4 ul {
+    padding: 0;
+    list-style: none;
+    font-size: 14px;
+}
+.sky-form h4 {
+    margin-top: 10px;
+    background: #ececec;
+    padding: 15px 20px;
+    color: #000;
+    text-transform: uppercase;
+    margin-bottom: 0;
+    font-size: 16px;
+    font-family: "Lora-Regular";
+}
+.sky-form section {
+    margin-bottom: 20px;
+}
+.sky-form .label {
+    display: block;
+    margin-bottom: 6px;
+    line-height: 19px;
+}
+.sky-form .label.col {
+    margin: 0;
+    padding-top: 10px;
+}
+.sky-form .input,
+.sky-form .select,
+.sky-form .textarea,
+.sky-form .radio,
+.sky-form .checkbox,
+.sky-form .toggle,
+.sky-form .button {
+    position: relative;
+    display: block;
+}
+/* selects */
+.sky-form .select i {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    width: 1px;
+    height: 11px;
+    background: #fff;
+    box-shadow: 0 0 0 12px #fff;
+}
+.sky-form .select i:after,
+.sky-form .select i:before {
+    content: "";
+    position: absolute;
+    right: 0;
+    border-right: 4px solid transparent;
+    border-left: 4px solid transparent;
+}
+.sky-form .select i:after {
+    bottom: 0;
+    border-top: 4px solid #404040;
+}
+.sky-form .select i:before {
+    top: 0;
+    border-bottom: 4px solid #404040;
+}
+.sky-form .select-multiple select {
+    height: auto;
+}
+/* radios and checkboxes */
+.sky-form .radio,
+.sky-form .checkbox {
+    outline: none;
+    border: none;
+    margin-bottom: 4px;
+    padding-left: 27px;
+    font-size: 13px;
+    line-height: 27px;
+    color: #555555;
+    cursor: pointer;
+    text-transform: capitalize;
+    font-weight: normal;
+    margin-top: 0;
+}
+.sky-form .radio {
+    text-transform: none;
+}
+.sky-form .radio:last-child,
+.sky-form .checkbox:last-child {
+    margin-bottom: 0;
+}
+.sky-form .radio input,
+.sky-form .checkbox input {
+    position: absolute;
+    left: -9999px;
+}
+.sky-form .radio i,
+.sky-form .checkbox i {
+    position: absolute;
+    top: 5px;
+    left: 0;
+    display: block;
+    width: 17px;
+    height: 17px;
+    outline: none;
+    border-width: 2px;
+    border-style: solid;
+    background: #fff;
+}
+.sky-form .radio i {
+    border-radius: 50%;
+}
+.sky-form .radio input + i:after,
+.sky-form .checkbox input + i:after {
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.1s;
+}
+.sky-form .radio input + i:after {
+    content: "";
+    top: 4px;
+    left: 4px;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+.sky-form .checkbox input + i:after {
+    content: "";
+    top: 3px;
+    left: 2px;
+    width: 10px;
+    height: 7px;
+    background: url(http://localhost:8080/rolex/resources/images/tick.png) no-repeat;
+    text-align: center;
+}
+.sky-form .radio input:checked + i:after,
+.sky-form .checkbox input:checked + i:after {
+    opacity: 1;
+}
+.sky-form .inline-group {
+    margin: 0 -30px -4px 0;
+}
+.sky-form .inline-group:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+.sky-form .inline-group .radio,
+.sky-form .inline-group .checkbox {
+    float: left;
+    margin-right: 30px;
+}
+.sky-form .inline-group .radio:last-child,
+.sky-form .inline-group .checkbox:last-child {
+    margin-bottom: 4px;
+}
+/* icons */
+
+.sky-form [class^="icon-"] {
+    font-family: FontAwesome;
+    font-style: normal;
+    font-weight: normal;
+}
+/* normal state */
+.sky-form .input input,
+.sky-form .select select,
+.sky-form .textarea textarea,
+.sky-form .radio i,
+.sky-form .checkbox i,
+.sky-form .toggle i,
+.sky-form .icon-append,
+.sky-form .icon-prepend {
+    border-color: #e5e5e5;
+    transition: border-color 0.3s;
+}
+.sky-form .toggle i:before {
+    background-color: #2da5da;
+}
+/* hover state */
+.sky-form .input:hover input,
+.sky-form .select:hover select,
+.sky-form .textarea:hover textarea,
+.sky-form .radio:hover i,
+.sky-form .checkbox:hover i,
+.sky-form .toggle:hover i {
+    border-color: #73b6e1;
+}
+.sky-form .button:hover {
+    opacity: 1;
+}
+/* focus state */
+.sky-form .input input:focus,
+.sky-form .select select:focus,
+.sky-form .textarea textarea:focus,
+.sky-form .radio input:focus + i,
+.sky-form .checkbox input:focus + i,
+.sky-form .toggle input:focus + i {
+    border-color: #73b6e1;
+}
+/* checked state */
+.sky-form .radio input + i:after {
+    background-color: #73b6e1;
+}
+.sky-form .checkbox input + i:after {
+    color: #73b6e1;
+}
+.sky-form .radio input:checked + i,
+.sky-form .checkbox input:checked + i,
+.sky-form .toggle input:checked + i {
+    border-color: #73b6e1;
+}
+/* error state */
+.sky-form .state-error input,
+.sky-form .state-error select,
+.sky-form .state-error textarea,
+.sky-form .radio.state-error i,
+.sky-form .checkbox.state-error i,
+.sky-form .toggle.state-error i {
+    background: #fff0f0;
+}
+/* success state */
+.sky-form .state-success input,
+.sky-form .state-success select,
+.sky-form .state-success textarea,
+.sky-form .radio.state-success i,
+.sky-form .checkbox.state-success i,
+.sky-form .toggle.state-success i {
+    background: #f0fff0;
+}
+/* disabled state */
+.sky-form .input.state-disabled input,
+.sky-form .select.state-disabled,
+.sky-form .textarea.state-disabled,
+.sky-form .radio.state-disabled,
+.sky-form .checkbox.state-disabled,
+.sky-form .toggle.state-disabled,
+.sky-form .button.state-disabled {
+    cursor: default;
+    opacity: 0.5;
+}
+.sky-form .input.state-disabled:hover input,
+.sky-form .select.state-disabled:hover select,
+.sky-form .textarea.state-disabled:hover textarea,
+.sky-form .radio.state-disabled:hover i,
+.sky-form .checkbox.state-disabled:hover i,
+.sky-form .toggle.state-disabled:hover i {
+    border-color: #e5e5e5;
+}
+.men {
+    padding: 5em 0 2em;
+}
+.labout {
+    display: block;
+    float: left;
+    margin: 0 3.6% 0 0;
+}
+.span_1_of_a1 {
+    width: 36.2%;
+}
+.span_2_of_a1 {
+    width: 60.1%;
+}
+.cont1 {
+    display: block;
+    float: left;
+}
+.span_2_of_a1 h1 {
+    color: #333;
+    text-transform: uppercase;
+    font-size: 1.7em;
+}
+.price_single {
+    font-size: 1.3em;
+    margin: 0.5em 0 1.5em;
+}
+span.reducedfrom {
+    text-decoration: line-through;
+    margin-right: 3%;
+    color: #555;
+}
+.price_single a {
+    color: #999;
+    font-size: 13px;
+}
+h2.quick {
+    color: #000;
+    font-size: 1.2em;
+    text-transform: uppercase;
+}
+p.quick_desc {
+    color: #999;
+    font-size: 0.95em;
+    line-height: 1.8em;
+    font-weight: 100;
+    margin-bottom: 2em;
+}
+span.actual {
+    color: #ffb87b;
+    font-size: 1em;
+    margin-right: 5%;
+}
+ul.size {
+    padding: 0;
+    list-style: none;
+    margin-top: 2em;
+}
+ul.size h3 {
+    color: #000;
+    font-size: 1.2em;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+ul.size li {
+    display: inline-block;
+    margin: 0 10px 0 0;
+}
+ul.size li a {
+    color: #555;
+    font-size: 0.85em;
+    background: #f0f0f0;
+    padding: 5px 10px;
+}
+ul.size li a:hover {
+    background: #f9d9be;
+    color: #000;
+    text-decoration: none;
+}
+ul.product-qty {
+    padding: 0;
+    list-style: none;
+    float: left;
+}
+.product-qty span {
+    color: #000;
+    font-size: 1.2em;
+    padding-bottom: 0.5em;
+    display: block;
+    text-transform: uppercase;
+}
+.product-qty select {
+    border: 1px solid #eee;
+    padding: 0.5em;
+    font-size: 1em;
+    outline: none;
+}
+.product-qty option {
+    border: 1px solid #eee;
+}
+p.availability {
+    color: #999;
+    font-size: 1em;
+    font-weight: normal;
+}
+span.color {
+    color: #ffb87b;
+}
+.quantity_box {
+    margin: 2em 0;
+}
+.single_social {
+    padding: 0;
+    list-style: none;
+    float: right;
+}
+.btn.btn-primary {
+    font-size: 1.1em;
+    font-weight: 300;
+    font-style: normal;
+    text-shadow: none;
+    text-transform: uppercase;
+    color: #000;
+    padding: 10px 30px;
+    position: relative;
+    letter-spacing: 0;
+    background: transparent;
+    border-radius: 0;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    border-radius: 0;
+    z-index: 1;
+    overflow: hidden;
+}
+.btn {
+    display: inline-block;
+    padding: 4px 12px;
+    margin-bottom: 0;
+    font-size: 14px;
+    text-align: center;
+    vertical-align: middle;
+    cursor: pointer;
+    color: #333;
+    border: 1px solid #ccc;
+    border-bottom-color: #b3b3b3;
+}
+.btn-primary {
+    color: #fff;
+}
+.btn.btn-primary:before {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 100%;
+    bottom: 0;
+    right: 0;
+    top: 0;
+    z-index: -1;
+    border-radius: 0;
+    background: #e7bf9e;
+}
+.btn.btn-primary:hover:before {
+    width: 100%;
+    left: 0;
+}
+.btn.btn-primary:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    left: 0;
+    border-radius: 0;
+    background: #f9d9be;
+    z-index: -2;
+}
+.sap_tabs {
+    margin-top: 3em;
+}
+.facts {
+    border: 1px solid #e6e6e6;
+}
+.top1 {
+    margin-top: 2%;
+}
+.resp-tabs-list {
+    width: 100%;
+    list-style: none;
+    padding: 0;
+}
+.resp-tab-item:first-child {
+    border-left: none;
+}
+.resp-tab-item {
+    color: #777;
+    font-size: 0.95em;
+    cursor: pointer;
+    padding: 12px 10px;
+    display: inline-block;
+    margin: 0;
+    text-align: center;
+    list-style: none;
+    float: left;
+    outline: none;
+    text-transform: uppercase;
+}
+.resp-tab-item:hover {
+    text-shadow: none;
+    color: #000;
+}
+.resp-tab-active {
+    background: #f9d9be;
+    text-shadow: none;
+    color: #000;
+}
+.resp-tabs-container {
+    padding: 0px;
+    clear: left;
+}
+h2.resp-accordion {
+    cursor: pointer;
+    padding: 5px;
+    display: none;
+}
+.resp-content-active,
+.resp-accordion-active {
+    display: block;
+}
+h2.resp-accordion {
+    font-size: 1em;
+    margin: 0px;
+    padding: 10px 15px;
+    background: #f9d9be;
+    margin: 10px 0;
+    color: #fff;
+}
+h2.resp-accordion:hover {
+    background: #000;
+    text-shadow: none;
+    color: #fff;
+}
+ul.tab_list {
+    list-style: none;
+    padding: 1em;
+}
+ul.tab_list li {
+    margin-bottom: 10px;
+}
+ul.tab_list li a {
+    color: #999;
+    font-size: 0.95em;
+    line-height: 1.8em;
+    vertical-align: top;
+    text-decoration: none;
+}
+ul.tab_list li a:hover {
+    color: #333;
+}
