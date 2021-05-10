@@ -2,6 +2,9 @@ package com.rolex.web.model;
 
 import org.springframework.data.mongodb.core.mapping.Document;
 
+import java.sql.Timestamp;
+import java.util.UUID;
+
 @Document(collection = "Customer")
 public class Customer {
     private String customerID;
@@ -15,6 +18,12 @@ public class Customer {
 
 
     public Customer() {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        long time = timestamp.getTime();
+        UUID uuid = UUID.randomUUID();
+        customerID = String.format("%s%d", uuid.toString(), time);
+
+        accountTypeID = 2;
     }
 
     public Customer(String name) {
