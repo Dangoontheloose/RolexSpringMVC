@@ -2,36 +2,35 @@ package com.rolex.web.viewmodel;
 
 
 
-import org.hibernate.validator.constraints.Length;
+import com.rolex.web.validation.constraint.*;
 
-import javax.validation.constraints.Digits;
-import javax.validation.constraints.Email;
-import javax.validation.constraints.NotNull;
 
+@PasswordMatchConstraint.List({
+        @PasswordMatchConstraint(
+                field = "password",
+                fieldMatch = "passwordConfirm"
+        )
+})
 public class RegisterViewModel {
-    @NotNull(message = "Required", groups = CheckNull.class)
+    @NullConstraint
     private String firstName;
 
-    @NotNull(message = "Required", groups = CheckNull.class)
+    @NullConstraint
     private String lastName;
 
-    @Email(message = "The value is not in the right format.", groups = CheckOthers.class)
-    @NotNull(message = "Required")
+    @EmailConstraint
     private String email;
 
-    @Digits(message = "The value contains letters.", integer = 11, fraction = 11, groups = CheckOthers.class)
-    @NotNull(message = "Required", groups = CheckNull.class)
+    @PhoneNumConstraint
     private String phoneNumber;
 
-    @NotNull(message = "Required", groups = CheckNull.class)
+    @NullConstraint
     private String address;
 
-    @Length(min = 8, message = "Minimum 8 characters", groups = CheckOthers.class)
-    @NotNull(message = "Required", groups = CheckNull.class)
+    @PasswordConstraint
     private String password;
 
-    @Length(min = 8, message = "Minimum 8 characters", groups = CheckOthers.class)
-    @NotNull(message = "Required", groups = CheckNull.class)
+    @NullConstraint
     private String passwordConfirm;
 
 

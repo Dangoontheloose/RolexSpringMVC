@@ -2,21 +2,14 @@ package com.rolex.web.controller;
 
 
 import com.rolex.web.service.CustomerService;
-import com.rolex.web.viewmodel.CheckNull;
-import com.rolex.web.viewmodel.CheckOthers;
 import com.rolex.web.viewmodel.RegisterViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
-import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
-import javax.validation.GroupSequence;
 import javax.validation.Valid;
-
-@GroupSequence({ CheckNull.class, CheckOthers.class})
-interface OrderedChecks {}
 
 @Controller
 public class CustomerController {
@@ -50,10 +43,11 @@ public class CustomerController {
     }
 
     @PostMapping("/register-submit")
-    public String postRegister(@Validated(OrderedChecks.class) @ModelAttribute("registerViewModel") RegisterViewModel registerViewModel, BindingResult br, Model model) {
+    public String postRegister(@Valid @ModelAttribute("registerViewModel") RegisterViewModel registerViewModel, BindingResult br, Model model) {
         if (br.hasErrors()) {
             return "register";
         }
+        customerService.registerCustomer(registerViewModel);
         return "home";
     }
 }

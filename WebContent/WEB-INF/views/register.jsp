@@ -10,8 +10,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
 </head>
 <body>
 <div class="account-in">
@@ -54,19 +54,19 @@
                 <h2>LOGIN INFORMATION</h2>
                 <div>
                     <span>Password<label>*</label></span>
-                    <form:input type="text" path="password"/>
+                    <form:password path="password"/>
                     <form:errors path="password" cssClass="error"/>
                 </div>
                 <div>
                     <span>Confirm Password<label>*</label></span>
-                    <form:input type="text" path="passwordConfirm"/>
+                    <form:password path="passwordConfirm"/>
                     <form:errors path="passwordConfirm" cssClass="error"/>
                 </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
             <div class="register-button">
-                <form:button type="submit" value="submit">Submit</form:button>
+                <input type="submit" value="Submit"/>
                 <div class="clearfix"></div>
             </div>
         </form:form>
