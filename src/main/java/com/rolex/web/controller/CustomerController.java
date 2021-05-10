@@ -24,4 +24,10 @@ public class CustomerController {
         model.addAttribute("customerList", customerRepository.getCustomerList());
         return "customer-list";
     }
+
+    @RequestMapping(value = "/collection", method = RequestMethod.GET)
+    public String collection(Model model) {
+        model.addAttribute("collectionList", customerRepository.getCollectionList());
+        return "collection-list";
+    }
 }
