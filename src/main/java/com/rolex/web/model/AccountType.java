@@ -1,9 +1,11 @@
 package com.rolex.web.model;
 
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
 import java.util.List;
 
-
+@Document(collection = "AccountType")
 public class AccountType {
     private int AccountTypeID;
     private String AccountType;

@@ -1,5 +1,8 @@
 package com.rolex.web.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "WatchType")
 public class WatchType {
     private int watchTypeID;
     private String watchTypeValue;
@@ -20,3 +23,4 @@ public class WatchType {
         this.watchTypeValue = watchTypeValue;
     }
 }
+

@@ -1,0 +1,31 @@
+[{
+  "_id": {
+    "$oid": "60958014569db874b66e974a"
+  },
+  "sizeID": 1,
+  "sizeValue": 29
+},{
+  "_id": {
+    "$oid": "6095805321441a1be8f5790a"
+  },
+  "sizeID": 2,
+  "sizeValue": 31
+},{
+  "_id": {
+    "$oid": "6095805d21441a1be8f5790b"
+  },
+  "sizeID": 3,
+  "sizeValue": 34
+},{
+  "_id": {
+    "$oid": "6095806821441a1be8f5790c"
+  },
+  "sizeID": 4,
+  "sizeValue": 36
+},{
+  "_id": {
+    "$oid": "6095807b21441a1be8f5790d"
+  },
+  "sizeID": 5,
+  "sizeValue": 37
+}]

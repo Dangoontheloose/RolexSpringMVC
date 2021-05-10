@@ -1,27 +1,30 @@
 package com.rolex.web.controller;
 
-import com.rolex.web.repository.CustomerRepository;
+
+import com.rolex.web.service.CustomerService;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
+import org.springframework.web.bind.annotation.GetMapping;
+
 
 @Controller
 public class CustomerController {
-    private final CustomerRepository customerRepository;
+    @Autowired
+    private final CustomerService customerService;
 
     public CustomerController() {
-        this.customerRepository = new CustomerRepository();
+        customerService = new CustomerService();
     }
 
-    @RequestMapping(value = "/", method = RequestMethod.GET)
+    @GetMapping("/")
     public String home() {
         return "home";
     }
 
-    @RequestMapping(value = "/customers", method = RequestMethod.GET)
+    @GetMapping("/customers")
     public String customer(Model model) {
-        model.addAttribute("customerList", customerRepository.getCustomerList());
+        model.addAttribute("customerList", customerService.getCustomerList());
         return "customer-list";
     }
 

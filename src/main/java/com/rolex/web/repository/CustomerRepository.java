@@ -1,6 +1,7 @@
 package com.rolex.web.repository;
 
 
+
 import com.mongodb.ConnectionString;
 import com.mongodb.MongoClientSettings;
 import com.mongodb.client.*;
@@ -8,16 +9,9 @@ import com.rolex.web.model.*;
 import org.bson.codecs.configuration.CodecRegistry;
 import org.bson.codecs.pojo.PojoCodecProvider;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Repository;
-import org.springframework.transaction.annotation.Transactional;
 
-import java.util.ArrayList;
-import java.util.List;
 
-import static org.bson.codecs.configuration.CodecRegistries.fromProviders;
-import static org.bson.codecs.configuration.CodecRegistries.fromRegistries;
 
-@Repository
 @Transactional
 public class CustomerRepository {
     private MongoClient mongoClient;
@@ -110,5 +104,6 @@ public class CustomerRepository {
     public void addCustomer(Customer customer) {
         customerCollection.insertOne(customer);
     }
+
 
 }

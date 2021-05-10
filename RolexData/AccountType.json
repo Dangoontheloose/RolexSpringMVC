@@ -1,0 +1,13 @@
+[{
+  "_id": {
+    "$oid": "6092dacb3f95a1d45ac55b75"
+  },
+  "accountTypeID": 1,
+  "accountType": "Admin"
+},{
+  "_id": {
+    "$oid": "6092dafc3f95a1d45ac55b76"
+  },
+  "accountTypeID": 2,
+  "accountType": "Customer"
+}]
