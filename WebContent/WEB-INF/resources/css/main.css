@@ -238,11 +238,11 @@ span.m_1 {
 .infor-left h3 {
     font-size: 1.5em;
     color: #000;
-    margin: 0 0 0 0;
+    margin: 0;
     font-family: "BreeSerif-Regular";
 }
 .infor-left ul li a span {
-    background: url(http://localhost:8080/rolex/resources/images/s-icons.png) no-repeat;
+    background-image: url("http://localhost:8080/rolex/resources/images/s-icons.png");
     width: 34px;
     height: 34px;
     display: inline-block;
@@ -358,7 +358,7 @@ span.m_1 {
 .register-button {
     margin-top: 1em;
 }
-.register-button form input[type="submit"] {
+.register-button > input[type="submit"] {
     background: #f9d9be;
     color: #000;
     font-size: 1em;
@@ -369,7 +369,8 @@ span.m_1 {
     border: none;
     outline: none;
 }
-.register-button form input[type="submit"]:hover {
+.register-button > input[type="submit"]:hover {
+    cursor: pointer;
     background: #000;
     color: #fff;
 }
