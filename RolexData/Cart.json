@@ -1,0 +1,35 @@
+[{
+  "_id": {
+    "$oid": "6093b71c385f53bf0429ba13"
+  },
+  "cartID": 1,
+  "CustomerID": "cd0424",
+  "cart": [
+    {
+      "productID": "A2050",
+      "quantity": 1
+    },
+    {
+      "productID": "A2051",
+      "quantity": 2
+    }
+  ],
+  "payment": {
+    "paymentDate": {
+      "$date": "2021-05-24T17:00:00Z"
+    },
+    "paymentMethodID": 1
+  }
+},{
+  "_id": {
+    "$oid": "6093b78316c01346ccbac27a"
+  },
+  "cartID": 2,
+  "CustomerID": "cd2342",
+  "cart": [
+    {
+      "productID": "A2053",
+      "quantity": 1
+    }
+  ]
+}]

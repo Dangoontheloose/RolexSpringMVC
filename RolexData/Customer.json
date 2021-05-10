@@ -1,0 +1,23 @@
+[{
+  "_id": {
+    "$oid": "60917dd57b6b5d8c4f6c5581"
+  },
+  "address": "123 One Street",
+  "email": "dango@gmail.com",
+  "password": "1234",
+  "phoneNum": "08030093563",
+  "name": "Dango",
+  "accountTypeID": 1,
+  "customerID": "cd0424"
+},{
+  "_id": {
+    "$oid": "6092e202bea44334cc81acae"
+  },
+  "address": "111 Main Street",
+  "email": "kek@gmail.com",
+  "password": "12342",
+  "phoneNum": "090908744",
+  "name": "Reiss",
+  "accountTypeID": 2,
+  "customerID": "cd2342"
+}]

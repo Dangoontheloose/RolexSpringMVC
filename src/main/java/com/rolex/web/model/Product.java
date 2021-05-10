@@ -1,5 +1,8 @@
 package com.rolex.web.model;
 
+import org.springframework.data.mongodb.core.mapping.Document;
+
+@Document(collection = "Product")
 public class Product {
     private String productID;
     private int price;

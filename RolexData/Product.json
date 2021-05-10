@@ -1,0 +1,61 @@
+[{
+  "_id": {
+    "$oid": "60936e78b9e9fdba33c6ca39"
+  },
+  "productID": "A2050",
+  "price": 300,
+  "description": "a modern watch",
+  "stock": 10,
+  "collectionID": 1,
+  "img": "https://www.dropbox.com/s/e19856qmk6h1z06/116503.png?raw=1",
+  "watchTypeID": 1,
+  "sizeID": 2
+},{
+  "_id": {
+    "$oid": "60936f156e956b3f10a90852"
+  },
+  "productID": "A2051",
+  "price": 600,
+  "description": "another modern watch",
+  "stock": 10,
+  "collectionID": 1,
+  "img": "https://www.dropbox.com/s/vordmo07smw5xuv/116681.png?raw=1",
+  "watchTypeID": 2,
+  "sizeID": 1
+},{
+  "_id": {
+    "$oid": "609373456e956b3f10a90854"
+  },
+  "productID": "A2052",
+  "price": 540,
+  "description": "a modern watch",
+  "stock": 10,
+  "collectionID": 2,
+  "img": "https://www.dropbox.com/s/mzw5ky2v98skplt/116689.png?raw=1",
+  "watchTypeID": 1,
+  "sizeID": 3
+},{
+  "_id": {
+    "$oid": "609373606e956b3f10a90855"
+  },
+  "productID": "A2053",
+  "price": 540,
+  "description": "a modern watch",
+  "stock": 10,
+  "collectionID": 2,
+  "img": "https://www.dropbox.com/s/bjqmp5xlkoz5b5a/124060.jpg?raw=1",
+  "watchTypeID": 2,
+  "sizeID": 5
+},{
+  "_id": {
+    "$oid": "609373726e956b3f10a90856"
+  },
+  "productID": "A2054",
+  "price": 600,
+  "description": "another modern watch",
+  "stock": 10,
+  "collectionID": 1,
+  "img": "https://www.dropbox.com/s/hhsw3whdulbxp1s/126613l.png?raw=1",
+  "watchTypeID": 2,
+  "sizeID": 2
+}]
