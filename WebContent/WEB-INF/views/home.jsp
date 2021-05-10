@@ -4,13 +4,13 @@
     <head>
         <title>Home Page</title>
         <link rel="stylesheet"
-              href="http://localhost:8080/rolex/resources/css/bootstrap.css">
+              href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
         <link rel="stylesheet"
-              href="http://localhost:8080/rolex/resources/css/flexslider.css">
+              href="${pageContext.request.contextPath}/resources/css/flexslider.css">
         <link rel="stylesheet"
-              href="http://localhost:8080/rolex/resources/css/style.css">
+              href="${pageContext.request.contextPath}/resources/css/style.css">
         <link rel="stylesheet"
-              href="http://localhost:8080/rolex/resources/css/memenu.css">
+              href="${pageContext.request.contextPath}/resources/css/memenu.css">
     </head>
     <body>
     <!--top-header-->
