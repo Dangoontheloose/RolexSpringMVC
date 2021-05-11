@@ -15,13 +15,14 @@ public class ProductService {
     @Autowired
     private ProductRepository productRepository;
 
-    public List<Product> getAllProduct() {
+    public List<Product> getProductList() {
         return productRepository.findAll();
     }
-
-    public void saveProduct(Product product) {
+    public void addProduct(Product product) {
         productRepository.insert(product);
     }
+    public void deleteProduct(Product product) { productRepository.delete(product); }
+    public void updateProduct(Product product) { productRepository.save(product); }
 
     public List<Product> sortProductByCollectionID(int collectionID) {
         return productRepository.findByCollectionID(collectionID);

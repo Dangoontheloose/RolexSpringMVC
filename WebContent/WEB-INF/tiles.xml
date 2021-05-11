@@ -17,4 +17,7 @@
     <definition name="register" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/register.jsp"/>
     </definition>
+    <definition name="admin-collection-add" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
+    </definition>
 </tiles-definitions>

@@ -18,7 +18,7 @@ public class ProductController {
 
     @GetMapping("/pro")
     public String pro(Model model) {
-        model.addAttribute("product", productService.getAllProduct());
+        model.addAttribute("product", productService.getProductList());
         return "product";
     }
     @PostMapping("/pro/create")
@@ -31,7 +31,7 @@ public class ProductController {
         product.setImg("fe");
         product.setCollectionID(1);
 
-        productService.saveProduct(product);
+        productService.addProduct(product);
 
         return "home";
     }
