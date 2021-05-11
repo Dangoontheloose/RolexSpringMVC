@@ -5,17 +5,19 @@
         <div class="row">
             <div class="col-md-9 prdt-left">
                 <div class="row product-one">
-                    <div class="col-md-4 product-left p-left">
-                        <div class="product-main">
-                            <a href="#" class="mask"><img class="img-responsive zoom-img" src="http://localhost:8080/rolex/resources/images/p-1.png" alt="" /></a>
-                            <div class="product-bottom">
-                                <h3>Smart Watches</h3>
-                                <p>Explore Now</p>
-                                <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">$ 329</span></h4>
+                    <c:forEach var="item" items="${product}">
+                        <div class="col-md-4 product-left p-left">
+                            <div class="product-main">
+                                <a href="#" class="mask"><img class="img-responsive zoom-img" src="${item.img}" alt="" /></a>
+                                <div class="product-bottom">
+                                    <h3>${item.collectionID}</h3>
+                                    <p>${item.productID}</p>
+                                    <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">${item.price}</span></h4>
+                                </div>
                             </div>
                         </div>
-                    </div>
                     <div class="clearfix"></div>
+                    </c:forEach>
                 </div>
             </div>
             <div class="col-md-3 prdt-right">
