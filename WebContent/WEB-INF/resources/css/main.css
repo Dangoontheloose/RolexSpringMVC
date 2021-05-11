@@ -471,6 +471,10 @@ a.mask {
 img.zoom-img {
     margin: 0 auto;
 }
+img.img-responsive {
+    width: 250px;
+    height: 300px;
+}
 .product-left:hover img.zoom-img {
     overflow: hidden;
     cursor: pointer;

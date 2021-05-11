@@ -16,10 +16,10 @@ public class ProductController {
     private final ProductService productService;
     public ProductController() { productService = new ProductService(); }
 
-    @GetMapping("/pro")
+    @GetMapping("/")
     public String pro(Model model) {
         model.addAttribute("product", productService.getAllProduct());
-        return "product";
+        return "home";
     }
     @PostMapping("/pro/create")
     public String save() {

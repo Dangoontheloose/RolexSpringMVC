@@ -25,11 +25,6 @@ public class CustomerController {
         return new RegisterViewModel();
     }
 
-    @GetMapping("/")
-    public String home() {
-        return "home";
-    }
-
     @GetMapping("/customers")
     public String customer(Model model) {
         model.addAttribute("customerList", customerService.getCustomerList());
