@@ -1,4 +1,4 @@
-package com.rolex.web.validation.constraint;
+package com.rolex.web.validation.constraint.customer;
 
 import com.rolex.web.validation.validator.EmailValidator;
 

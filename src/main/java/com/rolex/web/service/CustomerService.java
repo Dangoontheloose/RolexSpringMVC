@@ -30,4 +30,8 @@ public class CustomerService {
 
         customerRepository.insert(customer);
     }
+
+    public boolean emailNotRegistered(String email) {
+        return customerRepository.findByEmail(email) == null;
+    }
 }

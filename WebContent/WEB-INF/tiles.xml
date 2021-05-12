@@ -25,5 +25,16 @@
 <!--    Product Detail Page-->
     <definition name="productDetail" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/product_detail.jsp"/>
+<!--    Admin Product List Page-->
+    <definition name="admin-product-list" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>
+    </definition>
+<!--    Admin Product Add Page -->
+    <definition name="admin-product-add" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-product-add.jsp"/>
+    </definition>
+<!-- Admin Product Collection Add Page -->
+    <definition name="admin-collection-add" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
     </definition>
 </tiles-definitions>

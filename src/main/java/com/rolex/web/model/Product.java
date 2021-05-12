@@ -1,9 +1,12 @@
 package com.rolex.web.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 @Document(collection = "Product")
 public class Product {
+    @Id
+    private String _id;
     private String productID;
     private int price;
     private String description;
@@ -12,6 +15,8 @@ public class Product {
     private int sizeID;
     private int watchTypeID;
     private int collectionID;
+    private int sizeID;
+    private int watchTypeID;
 
     public String getProductID() {
         return productID;

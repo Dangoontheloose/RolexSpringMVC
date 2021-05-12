@@ -1,5 +1,6 @@
 package com.rolex.web.model;
 
+import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.sql.Timestamp;
@@ -7,6 +8,8 @@ import java.util.UUID;
 
 @Document(collection = "Customer")
 public class Customer {
+    @Id
+    private String _id;
     private String customerID;
     private String address;
     private String email;
