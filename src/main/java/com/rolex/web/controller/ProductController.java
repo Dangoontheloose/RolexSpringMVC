@@ -2,6 +2,8 @@ package com.rolex.web.controller;
 
 import com.rolex.web.model.Product;
 import com.rolex.web.service.ProductService;
+import com.rolex.web.viewmodel.ProductDetailViewModel;
+import com.rolex.web.viewmodel.ProductViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -36,9 +38,14 @@ public class ProductController {
         return "home";
     }
 
+//    @GetMapping("/product/{id}")
+//    public String productListByCollectionID(@PathVariable("id") int id, ProductViewModel productViewModel, Model model) {
+//        model.addAttribute("product", productService.sortProductByCollectionID(id));
+//        return "product";
+//    }
     @GetMapping("/product/{id}")
-    public String productListByCollectionID(@PathVariable("id") int id, Model model) {
-        model.addAttribute("productList", productService.sortProductByCollectionID(id));
-        return "product";
+    public String productDetail(@PathVariable("id") String id, Model model) {
+        model.addAttribute("product", productService.findProductID(id));
+        return "productDetail";
     }
 }

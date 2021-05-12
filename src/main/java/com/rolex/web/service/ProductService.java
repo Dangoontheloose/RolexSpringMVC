@@ -26,5 +26,7 @@ public class ProductService {
     public List<Product> sortProductByCollectionID(int collectionID) {
         return productRepository.findByCollectionID(collectionID);
     }
-
+    public Product findProductID(String productID) {
+        return productRepository.findFirstByProductID(productID);
+    }
 }

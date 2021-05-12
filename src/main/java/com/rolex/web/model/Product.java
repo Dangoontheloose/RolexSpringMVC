@@ -9,7 +9,8 @@ public class Product {
     private String description;
     private int stock;
     private String img;
-
+    private int sizeID;
+    private int watchTypeID;
     private int collectionID;
 
     public String getProductID() {
@@ -58,5 +59,21 @@ public class Product {
 
     public void setCollectionID(int collectionID) {
         this.collectionID = collectionID;
+    }
+
+    public int getSizeID() {
+        return sizeID;
+    }
+
+    public void setSizeID(int sizeID) {
+        this.sizeID = sizeID;
+    }
+
+    public int getWatchTypeID() {
+        return watchTypeID;
+    }
+
+    public void setWatchTypeID(int watchTypeID) {
+        this.watchTypeID = watchTypeID;
     }
 }

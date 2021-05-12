@@ -22,4 +22,8 @@
     <definition name="login" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
     </definition>
+<!--    Product Detail Page-->
+    <definition name="productDetail" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/product_detail.jsp"/>
+    </definition>
 </tiles-definitions>

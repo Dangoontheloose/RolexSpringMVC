@@ -14,6 +14,7 @@ import java.util.List;
 public interface ProductRepository extends MongoRepository<Product, String> {
 //    @Query("{ 'collectionID': ?0}")
     List<Product> findByCollectionID(int collectionID);
+    Product findFirstByProductID(String productID);
     @Query("{ 'price': }")
     List<Product> findByPriceGreaterThan(int price);
 }
