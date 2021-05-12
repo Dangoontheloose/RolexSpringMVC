@@ -1,19 +1,6 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ taglib uri="http://www.springframework.org/tags/form" prefix="form" %>
-
 <%@ page contentType="text/html;charset=UTF-8" %>
-
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
-    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
-</head>
-<body>
 <div class="account-in">
     <div class="container">
         <form:form action="register-submit" method="post" modelAttribute="registerViewModel">
@@ -72,5 +59,3 @@
         </form:form>
     </div>
 </div>
-</body>
-</html>

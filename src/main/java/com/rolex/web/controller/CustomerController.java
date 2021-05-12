@@ -45,4 +45,9 @@ public class CustomerController {
         customerService.registerCustomer(registerViewModel);
         return "home";
     }
+    @GetMapping("/login")
+    public String login(Model model) {
+        return "login";
+    }
+
 }
