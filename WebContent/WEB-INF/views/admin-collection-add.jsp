@@ -16,7 +16,7 @@
 <body>
 <div class="account-in">
     <div class="container">
-        <form:form action="add-submit" method="post" modelAttribute="collection">
+        <form:form action="add-collection-submit" method="post" modelAttribute="collection">
             <div class="register-top-grid">
                 <h2>COLLECTION INFO</h2>
                 <div>

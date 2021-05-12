@@ -16,7 +16,16 @@ public class WatchTypeService {
 
     public List<WatchType> getWatchTypeList() { return watchTypeRepository.findAll(); }
 
-    public void addWatchType(WatchType watchType) { watchTypeRepository.insert(watchType);}
+    public void updateWatchType(WatchType watchType) {
+        WatchType currentWatch = watchTypeRepository.findByWatchTypeID(watchType.getWatchTypeID());
+        if (currentWatch != null) {
+            currentWatch.setWatchTypeValue(watchType.getWatchTypeValue());
+            watchTypeRepository.save(currentWatch);
+        }
+        else{
+            watchTypeRepository.insert(watchType);
+        }
+    }
     public void deleteWatchType(WatchType watchType) { watchTypeRepository.delete(watchType);}
-    public void updateWatchType(WatchType watchType) { watchTypeRepository.save(watchType);}
+    public void deleteWatchTypeByWatchTypeID(int id) { watchTypeRepository.deleteByWatchTypeID(id);}
 }

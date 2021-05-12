@@ -16,6 +16,8 @@ public class MongoConfig  {
     @Bean
     public MongoClient mongo() {
         ConnectionString connectionString = new ConnectionString("mongodb://localhost:27017/Rolex");
+//        ConnectionString connectionString = new ConnectionString("mongodb+srv://user1:1111@rolexcluster.javs2.mongodb.net/Rolex?retryWrites=true&w=majority");
+//        ConnectionString connectionString = new ConnectionString("mongodb+srv://dango:1234@rolexcluster.javs2.mongodb.net/Rolex?retryWrites=true&w=majority");
         MongoClientSettings mongoClientSettings = MongoClientSettings.builder()
                 .applyConnectionString(connectionString)
                 .build();

@@ -21,20 +21,6 @@ public class ProductController {
         model.addAttribute("product", productService.getProductList());
         return "product";
     }
-    @PostMapping("/pro/create")
-    public String save() {
-        Product product = new Product();
-        product.setProductID("AA22");
-        product.setDescription("dfd");
-        product.setPrice(20);
-        product.setStock(10);
-        product.setImg("fe");
-        product.setCollectionID(1);
-
-        productService.addProduct(product);
-
-        return "home";
-    }
 
     @GetMapping("/product/{id}")
     public String productListByCollectionID(@PathVariable("id") int id, Model model) {

@@ -16,7 +16,7 @@
 <body>
 <div class="account-in">
     <div class="container">
-        <form:form action="product-add" method="post" modelAttribute="">
+        <form:form action="${pageContext.request.contextPath}/admin/product/add-product-submit" method="post" modelAttribute="productForm">
             <div class="register-top-grid">
                 <h2>PRODUCT INFO</h2>
                 <div>
@@ -30,19 +30,46 @@
                     <form:errors path="price" cssClass="error"/>
                 </div>
                 <div>
-                    <span>Email Address<label>*</label></span>
+                    <span>Description<label>*</label></span>
                     <form:input type="text" path="description"/>
                     <form:errors path="description" cssClass="error"/>
                 </div>
                 <div>
-                    <span>Phone Number<label>*</label></span>
+                    <span>Stock<label>*</label></span>
                     <form:input type="text" path="stock"/>
                     <form:errors path="stock" cssClass="error"/>
                 </div>
                 <div>
-                    <span>Address<label>*</label></span>
+                    <span>Image<label>*</label></span>
                     <form:input type="text" path="img"/>
                     <form:errors path="img" cssClass="error"/>
+                </div>
+                <div>
+                    <span>Type<label>*</label></span>
+                    <form:select type="text" path="collectionName">
+                        <c:forEach var="item" items="${collectionList}">
+                            <form:option value="${item.collectionName}">${item.collectionName}</form:option>
+                        </c:forEach>
+                    </form:select>
+                    <form:errors path="watchTypeValue" cssClass="error"/>
+                </div>
+                <div>
+                    <span>Size<label>*</label></span>
+                    <form:select type="text" path="sizeValue">
+                        <c:forEach var="item" items="${sizeList}">
+                            <form:option value="${item.sizeValue}">${item.sizeValue}</form:option>
+                        </c:forEach>
+                    </form:select>
+                    <form:errors path="sizeValue" cssClass="error"/>
+                </div>
+                <div>
+                    <span>Type<label>*</label></span>
+                    <form:select type="text" path="watchTypeValue">
+                        <c:forEach var="item" items="${typeList}">
+                            <form:option value="${item.watchTypeValue}">${item.watchTypeValue}</form:option>
+                        </c:forEach>
+                    </form:select>
+                    <form:errors path="watchTypeValue" cssClass="error"/>
                 </div>
                 <div class="clearfix"></div>
             </div>

@@ -2,7 +2,7 @@ package com.rolex.web.viewmodel;
 
 
 
-import com.rolex.web.validation.constraint.*;
+import com.rolex.web.validation.constraint.customer.*;
 
 
 @PasswordMatchConstraint.List({
