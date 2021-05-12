@@ -1,7 +1,7 @@
 package com.rolex.web.validation.validator;
 
 import com.rolex.web.service.CustomerService;
-import com.rolex.web.validation.constraint.EmailConstraint;
+import com.rolex.web.validation.constraint.customer.EmailConstraint;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.validation.ConstraintValidator;
