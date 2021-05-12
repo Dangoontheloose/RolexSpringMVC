@@ -15,8 +15,6 @@ public class Product {
     private int sizeID;
     private int watchTypeID;
     private int collectionID;
-    private int sizeID;
-    private int watchTypeID;
 
     public String getProductID() {
         return productID;

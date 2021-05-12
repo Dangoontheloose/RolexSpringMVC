@@ -25,6 +25,7 @@
 <!--    Product Detail Page-->
     <definition name="productDetail" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/product_detail.jsp"/>
+    </definition>
 <!--    Admin Product List Page-->
     <definition name="admin-product-list" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>

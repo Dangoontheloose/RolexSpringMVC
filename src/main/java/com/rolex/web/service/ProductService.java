@@ -64,6 +64,7 @@ public class ProductService {
 
     public Product findProductID(String productID) {
         return productRepository.findFirstByProductID(productID);
+    }
 
     public List<ProductViewModel> getProductVMList() {
         List<Product> productList = this.getProductList();
