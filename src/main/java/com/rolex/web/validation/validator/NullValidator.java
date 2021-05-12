@@ -1,6 +1,6 @@
 package com.rolex.web.validation.validator;
 
-import com.rolex.web.validation.constraint.NullConstraint;
+import com.rolex.web.validation.constraint.customer.NullConstraint;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;

@@ -1,6 +1,6 @@
 package com.rolex.web.validation.validator;
 
-import com.rolex.web.validation.constraint.PasswordMatchConstraint;
+import com.rolex.web.validation.constraint.customer.PasswordMatchConstraint;
 import org.springframework.beans.BeanWrapperImpl;
 
 import javax.validation.ConstraintValidator;
@@ -24,7 +24,7 @@ public class PasswordMatchValidator
                 .getPropertyValue(field);
         Object fieldMatchValue = new BeanWrapperImpl(value)
                 .getPropertyValue(fieldMatch);
-        boolean isValid = false;
+        boolean isValid;
         if (fieldValue != null) {
             isValid = fieldValue.equals(fieldMatchValue);
         } else {

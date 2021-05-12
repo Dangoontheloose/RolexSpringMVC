@@ -17,4 +17,13 @@
     <definition name="register" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/register.jsp"/>
     </definition>
+    <definition name="admin-product-list" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>
+    </definition>
+    <definition name="admin-product-add" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-product-add.jsp"/>
+    </definition>
+    <definition name="admin-collection-add" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
+    </definition>
 </tiles-definitions>

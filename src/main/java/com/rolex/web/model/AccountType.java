@@ -7,6 +7,7 @@ import java.util.List;
 
 @Document(collection = "AccountType")
 public class AccountType {
+    private String _id;
     private int AccountTypeID;
     private String AccountType;
 

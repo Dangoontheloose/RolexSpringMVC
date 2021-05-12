@@ -1,7 +1,6 @@
 package com.rolex.web.validation.validator;
 
-import com.rolex.web.validation.constraint.PasswordConstraint;
-import com.rolex.web.validation.constraint.PhoneNumConstraint;
+import com.rolex.web.validation.constraint.customer.PasswordConstraint;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
