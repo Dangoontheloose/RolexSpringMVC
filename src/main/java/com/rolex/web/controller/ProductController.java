@@ -16,23 +16,8 @@ public class ProductController {
     private final ProductService productService;
     public ProductController() { productService = new ProductService(); }
 
-    @GetMapping("/pro")
-    public String pro(Model model) {
-        model.addAttribute("product", productService.getProductList());
-        return "product";
-    }
-    @PostMapping("/pro/create")
-    public String save() {
-        Product product = new Product();
-        product.setProductID("AA22");
-        product.setDescription("dfd");
-        product.setPrice(20);
-        product.setStock(10);
-        product.setImg("fe");
-        product.setCollectionID(1);
-
-        productService.saveProduct(product);
-
+    @GetMapping("/")
+    public String home(Model model) {
         return "home";
     }
 
