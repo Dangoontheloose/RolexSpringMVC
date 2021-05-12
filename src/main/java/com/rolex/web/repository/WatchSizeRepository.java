@@ -8,4 +8,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Repository
 public interface WatchSizeRepository extends MongoRepository<WatchSize, String> {
+    WatchSize findBySizeID(int sizeID);
+    WatchSize findBySizeValue(int sizeValue);
+    void deleteBySizeID(int sizeID);
 }
