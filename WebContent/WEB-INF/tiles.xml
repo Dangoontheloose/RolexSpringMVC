@@ -14,15 +14,27 @@
     <definition name="home" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
     </definition>
+<!--    Register Page-->
     <definition name="register" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/register.jsp"/>
     </definition>
+<!--    Login Page-->
+    <definition name="login" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/login.jsp"/>
+    </definition>
+<!--    Product Detail Page-->
+    <definition name="productDetail" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/product_detail.jsp"/>
+    </definition>
+<!--    Admin Product List Page-->
     <definition name="admin-product-list" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>
     </definition>
+<!--    Admin Product Add Page -->
     <definition name="admin-product-add" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-add.jsp"/>
     </definition>
+<!-- Admin Product Collection Add Page -->
     <definition name="admin-collection-add" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
     </definition>

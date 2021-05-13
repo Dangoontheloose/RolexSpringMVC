@@ -12,10 +12,9 @@ public class Product {
     private String description;
     private int stock;
     private String img;
-
-    private int collectionID;
     private int sizeID;
     private int watchTypeID;
+    private int collectionID;
 
     public String getProductID() {
         return productID;

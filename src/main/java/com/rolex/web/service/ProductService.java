@@ -37,9 +37,11 @@ public class ProductService {
         product.setStock(productViewModel.getStock());
         product.setImg(productViewModel.getImg());
 
-        product.setCollectionID(collectionRepository.findByCollectionName(productViewModel.getCollectionName()).getCollectionID());
+        product.setCollectionID(
+                collectionRepository.findByCollectionName(productViewModel.getCollectionName()).getCollectionID());
         product.setSizeID(watchSizeRepository.findBySizeValue(productViewModel.getSizeValue()).getSizeID());
-        product.setWatchTypeID(watchTypeRepository.findByWatchTypeValue(productViewModel.getWatchTypeValue()).getWatchTypeID());
+        product.setWatchTypeID(
+                watchTypeRepository.findByWatchTypeValue(productViewModel.getWatchTypeValue()).getWatchTypeID());
 
         productRepository.insert(product);
     }
@@ -60,12 +62,15 @@ public class ProductService {
         return productRepository.findFirstByCollectionID(collectionID) == null;
     }
 
+    public Product findProductID(String productID) {
+        return productRepository.findFirstByProductID(productID);
+    }
+
     public List<ProductViewModel> getProductVMList() {
         List<Product> productList = this.getProductList();
         List<ProductViewModel> pvmList = new ArrayList<>();
 
-        for (Product item :
-                productList) {
+        for (Product item : productList) {
             ProductViewModel pvm = new ProductViewModel();
             pvm.setProductID(item.getProductID());
             pvm.setCollectionName(collectionRepository.findByCollectionID(item.getCollectionID()).getCollectionName());
