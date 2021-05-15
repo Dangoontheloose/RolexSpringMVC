@@ -1,6 +1,7 @@
-package com.rolex.web.validation.constraint.customer;
+package com.rolex.web.validation.constraint.customer.login;
 
-import com.rolex.web.validation.validator.PasswordMatchValidator;
+import com.rolex.web.validation.validator.LoginValidator;
+import com.rolex.web.validation.validator.PasswordConfirmValidator;
 
 import javax.validation.Constraint;
 import javax.validation.Payload;
@@ -9,16 +10,16 @@ import java.lang.annotation.Retention;
 import java.lang.annotation.RetentionPolicy;
 import java.lang.annotation.Target;
 
-@Constraint(validatedBy = PasswordMatchValidator.class)
+@Constraint(validatedBy = LoginValidator.class)
 @Target({ ElementType.TYPE })
 @Retention(RetentionPolicy.RUNTIME)
-public @interface PasswordMatchConstraint {
+public @interface LoginConstraint {
 
     String message() default "Fields value does not match!";
 
-    String field();
+    String email();
 
-    String fieldMatch();
+    String password();
 
     Class<?>[] groups() default {};
     Class<? extends Payload>[] payload() default {};
@@ -26,6 +27,6 @@ public @interface PasswordMatchConstraint {
     @Target({ ElementType.TYPE })
     @Retention(RetentionPolicy.RUNTIME)
     @interface List {
-        PasswordMatchConstraint[] value();
+        com.rolex.web.validation.constraint.customer.login.LoginConstraint[] value();
     }
 }

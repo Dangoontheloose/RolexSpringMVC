@@ -3,10 +3,14 @@ package com.rolex.web.viewmodel;
 
 
 import com.rolex.web.validation.constraint.customer.*;
+import com.rolex.web.validation.constraint.customer.register.EmailConstraint;
+import com.rolex.web.validation.constraint.customer.register.PasswordConfirmConstraint;
+import com.rolex.web.validation.constraint.customer.register.PasswordConstraint;
+import com.rolex.web.validation.constraint.customer.register.PhoneNumConstraint;
 
 
-@PasswordMatchConstraint.List({
-        @PasswordMatchConstraint(
+@PasswordConfirmConstraint.List({
+        @PasswordConfirmConstraint(
                 field = "password",
                 fieldMatch = "passwordConfirm"
         )

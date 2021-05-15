@@ -10,6 +10,10 @@
         <put-attribute name="body" value="" />
         <put-attribute name="footer" value="/WEB-INF/basefragments/_footer.jsp" />
     </definition>
+    <definition name="base.redirect"
+                template="/WEB-INF/basefragments/redirectLayout.jsp">
+        <put-attribute name="body" value="" />
+    </definition>
 <!--    Home Page-->
     <definition name="home" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
@@ -35,7 +39,14 @@
         <put-attribute name="body" value="/WEB-INF/views/admin-product-add.jsp"/>
     </definition>
 <!-- Admin Product Collection Add Page -->
-    <definition name="admin-collection-add" extends="base.definition">
+    <definition name="admin-collection-add" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
     </definition>
+    <definition name="login-success" extends="base.redirect">
+        <put-attribute name="body" value="/WEB-INF/views/login-success.jsp"/>
+    </definition>
+    <definition name="register-success" extends="base.redirect">
+        <put-attribute name="body" value="/WEB-INF/views/register-success.jsp"/>
+    </definition>
+
 </tiles-definitions>

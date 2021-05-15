@@ -96,6 +96,7 @@ ul.header_user_info li.user_desc {
     transition: all 0.2s linear;
     float: left;
     margin-top: 6px;
+    color:#fff;
 }
 .search-box {
     position: relative;
