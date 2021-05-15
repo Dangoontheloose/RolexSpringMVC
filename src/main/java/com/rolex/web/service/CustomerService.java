@@ -32,6 +32,10 @@ public class CustomerService {
     }
 
     public boolean emailNotRegistered(String email) {
-        return customerRepository.findByEmail(email) == null;
+        Customer customer = customerRepository.findByEmail(email);
+        return customer == null;
+    }
+    public boolean passwordCorrect(String email, String password) {
+        return customerRepository.findByEmailAndPassword(email, password) != null;
     }
 }

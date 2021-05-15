@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <div class="banner">
     <div class="container">
@@ -18,11 +19,14 @@
             </div>
             <div class="header_top_right">
                 <ul class="header_user_info">
-                    <a class="login" href="#">
-                        <i class="user"> </i>
-                        <li class="user_desc">My Account</li>
-                    </a>
-                    <div class="clearfix"> </div>
+                    <c:if test="${sessionScope.email == null}">
+                        <a class="login" href="${pageContext.request.contextPath}/login">
+                            <i class="user"></i>
+                            <li>Log in</li>
+                        </a>
+                    </c:if>
+                    <li class="user_desc">${sessionScope.email}</li>
+                    <div class="clearfix"></div>
                 </ul>
             </div>
             <div class="search-box">
@@ -36,7 +40,7 @@
             </div>
             <div class="clearfix"></div>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
     </div>
     <div class="header_bottom">
         <div class="menu">
@@ -47,10 +51,10 @@
                 </li>
                 <li><a class="color10" href="#">Brands</a></li>
                 <li><a class="color7" href="#">News</a></li>
-                <div class="clearfix"> </div>
+                <div class="clearfix"></div>
             </ul>
         </div>
-        <div class="clearfix"> </div>
+        <div class="clearfix"></div>
     </div>
 </div>
 

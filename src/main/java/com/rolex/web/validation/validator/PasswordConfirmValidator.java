@@ -1,18 +1,18 @@
 package com.rolex.web.validation.validator;
 
-import com.rolex.web.validation.constraint.customer.PasswordMatchConstraint;
+import com.rolex.web.validation.constraint.customer.register.PasswordConfirmConstraint;
 import org.springframework.beans.BeanWrapperImpl;
 
 import javax.validation.ConstraintValidator;
 import javax.validation.ConstraintValidatorContext;
 
-public class PasswordMatchValidator
-        implements ConstraintValidator<PasswordMatchConstraint, Object> {
+public class PasswordConfirmValidator
+        implements ConstraintValidator<PasswordConfirmConstraint, Object> {
 
     private String field;
     private String fieldMatch;
 
-    public void initialize(PasswordMatchConstraint passwordConstraintAnnotation) {
+    public void initialize(PasswordConfirmConstraint passwordConstraintAnnotation) {
         this.field = passwordConstraintAnnotation.field();
         this.fieldMatch = passwordConstraintAnnotation.fieldMatch();
     }

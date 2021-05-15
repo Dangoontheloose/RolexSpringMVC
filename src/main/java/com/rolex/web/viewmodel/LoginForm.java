@@ -1,6 +1,15 @@
 package com.rolex.web.viewmodel;
 
-public class LoginViewModel {
+
+import com.rolex.web.validation.constraint.customer.login.LoginConstraint;
+
+@LoginConstraint.List({
+        @LoginConstraint(
+                email = "email",
+                password = "password"
+        )
+})
+public class LoginForm {
     private String email;
     private String password;
 
