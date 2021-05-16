@@ -24,11 +24,6 @@ public class ProductController {
         return "home";
     }
 
-//    @GetMapping("/product/{id}")
-//    public String productListByCollectionID(@PathVariable("id") int id, ProductViewModel productViewModel, Model model) {
-//        model.addAttribute("product", productService.sortProductByCollectionID(id));
-//        return "product";
-//    }
     @GetMapping("/product/{id}")
     public String productDetail(@PathVariable("id") String id, Model model) {
         model.addAttribute("product", productService.findProductID(id));
