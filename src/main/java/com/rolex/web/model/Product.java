@@ -17,6 +17,7 @@ public class Product {
     private int sizeID;
     private int watchTypeID;
     private int collectionID;
+    private String[] detailDescription;
 
     public String getProductID() {
         return productID;
@@ -96,5 +97,13 @@ public class Product {
 
     public void setMaterialID(int materialID) {
         this.materialID = materialID;
+    }
+
+    public String[] getDetailDescription() {
+        return detailDescription;
+    }
+
+    public void setDetailDescription(String[] detailDescription) {
+        this.detailDescription = detailDescription;
     }
 }

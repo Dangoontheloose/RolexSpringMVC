@@ -48,5 +48,10 @@
     <definition name="register-success" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/register-success.jsp"/>
     </definition>
+<!--    Product Detail Page-->
+    <definition name="product-details" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/product-details.jsp"/>
+    </definition>
+
 
 </tiles-definitions>

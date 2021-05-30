@@ -11,6 +11,7 @@ public class ProductViewModel {
     private String watchTypeValue;
     private String img;
     private String[] imgDetails;
+    private String[] detailDescription;
 
     public String getProductID() {
         return productID;
@@ -90,5 +91,13 @@ public class ProductViewModel {
 
     public void setImgDetails(String[] imgDetails) {
         this.imgDetails = imgDetails;
+    }
+
+    public String[] getDetailDescription() {
+        return detailDescription;
+    }
+
+    public void setDetailDescription(String[] detailDescription) {
+        this.detailDescription = detailDescription;
     }
 }

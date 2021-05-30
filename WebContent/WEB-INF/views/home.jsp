@@ -8,7 +8,7 @@
                     <c:forEach var="item" items="${product}">
                         <div class="col-md-4 product-left p-left">
                             <div class="product-main">
-                                <a href="#" class="mask"><img class="img-responsive zoom-img" src="${item.img}" alt="" /></a>
+                                <a href="${pageContext.request.contextPath}/product/${item.productID}" class="mask"><img class="img-responsive zoom-img" src="${item.img}" alt="" /></a>
                                 <div class="product-bottom">
                                     <h3>${item.collectionID}</h3>
                                     <p>${item.productID}</p>

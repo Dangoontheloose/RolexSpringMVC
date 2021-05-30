@@ -88,4 +88,23 @@ public class ProductService {
 
         return pvmList;
     }
+    public ProductViewModel getProductVMFromID(String productID) {
+        Product product = productRepository.findFirstByProductID(productID);
+        ProductViewModel pvm = new ProductViewModel();
+
+        pvm.setProductID(product.getProductID());
+        pvm.setCollectionName(collectionRepository.findByCollectionID(product.getCollectionID()).getCollectionName());
+        pvm.setDescription(product.getDescription());
+        pvm.setPrice(product.getPrice());
+        pvm.setStock(product.getStock());
+        pvm.setImg(product.getImg());
+        pvm.setMaterialValue(materialRepository.findByMaterialID(product.getMaterialID()).getMaterialName());
+
+        pvm.setSizeValue(watchSizeRepository.findBySizeID(product.getSizeID()).getSizeValue());
+        pvm.setWatchTypeValue(watchTypeRepository.findByWatchTypeID(product.getWatchTypeID()).getWatchTypeValue());
+        pvm.setImgDetails(product.getImgDetails());
+        pvm.setDetailDescription(product.getDetailDescription());
+
+        return pvm;
+    }
 }
