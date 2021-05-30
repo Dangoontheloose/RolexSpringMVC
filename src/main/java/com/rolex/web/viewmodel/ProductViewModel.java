@@ -7,8 +7,10 @@ public class ProductViewModel {
     private int price;
     private int stock;
     private int sizeValue;
+    private String materialValue;
     private String watchTypeValue;
     private String img;
+    private String[] imgDetails;
 
     public String getProductID() {
         return productID;
@@ -72,5 +74,21 @@ public class ProductViewModel {
 
     public void setWatchTypeValue(String watchTypeValue) {
         this.watchTypeValue = watchTypeValue;
+    }
+
+    public String getMaterialValue() {
+        return materialValue;
+    }
+
+    public void setMaterialValue(String materialValue) {
+        this.materialValue = materialValue;
+    }
+
+    public String[] getImgDetails() {
+        return imgDetails;
+    }
+
+    public void setImgDetails(String[] imgDetails) {
+        this.imgDetails = imgDetails;
     }
 }
