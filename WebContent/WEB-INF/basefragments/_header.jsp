@@ -8,9 +8,9 @@
         <div class="header_top">
             <div class="header_top_left">
                 <div class="box">
-                    <a href="#">
+                    <a href="${pageContext.request.contextPath}/cart">
                         <h4>
-                            <p>Cart:(0 items)</p>
+                            <p>Cart:(${(sessionScope.cartSize != null) ? sessionScope.cartSize : 0} items)</p>
                             <img src="http://localhost:8080/rolex/resources/images/bag.png" alt=""/>
                             <div class="clearfix"></div>
                         </h4>
