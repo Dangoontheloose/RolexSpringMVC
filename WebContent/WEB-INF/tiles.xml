@@ -30,6 +30,10 @@
     <definition name="productDetail" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/product_detail.jsp"/>
     </definition>
+    <!--    Cart Page-->
+    <definition name="cart" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/cart.jsp"/>
+    </definition>
 <!--    Admin Product List Page-->
     <definition name="admin-product-list" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>
@@ -48,5 +52,10 @@
     <definition name="register-success" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/register-success.jsp"/>
     </definition>
+<!--    Product Detail Page-->
+    <definition name="product-details" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/product-details.jsp"/>
+    </definition>
+
 
 </tiles-definitions>

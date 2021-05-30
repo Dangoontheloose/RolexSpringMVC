@@ -12,9 +12,12 @@ public class Product {
     private String description;
     private int stock;
     private String img;
+    private String[] imgDetails;
+    private int materialID;
     private int sizeID;
     private int watchTypeID;
     private int collectionID;
+    private String[] detailDescription;
 
     public String getProductID() {
         return productID;
@@ -78,5 +81,29 @@ public class Product {
 
     public void setWatchTypeID(int watchTypeID) {
         this.watchTypeID = watchTypeID;
+    }
+
+    public String[] getImgDetails() {
+        return imgDetails;
+    }
+
+    public void setImgDetails(String[] imgDetails) {
+        this.imgDetails = imgDetails;
+    }
+
+    public int getMaterialID() {
+        return materialID;
+    }
+
+    public void setMaterialID(int materialID) {
+        this.materialID = materialID;
+    }
+
+    public String[] getDetailDescription() {
+        return detailDescription;
+    }
+
+    public void setDetailDescription(String[] detailDescription) {
+        this.detailDescription = detailDescription;
     }
 }

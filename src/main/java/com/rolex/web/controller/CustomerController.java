@@ -64,7 +64,7 @@ public class CustomerController {
     }
 
     @GetMapping("/login-success")
-    public String loginSucc() {
+    public String loginSuccess() {
         return "login-success";
     }
 
