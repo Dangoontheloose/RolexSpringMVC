@@ -31,6 +31,8 @@ public class AdminController {
     private WatchTypeService watchTypeService;
     @Autowired
     private WatchSizeService watchSizeService;
+    @Autowired
+    private MaterialService materialService;
 
 
     public AdminController() {
@@ -60,6 +62,7 @@ public class AdminController {
         model.addAttribute("collectionForm", new CollectionForm());
         model.addAttribute("typeForm", new TypeForm());
         model.addAttribute("sizeForm", new SizeForm());
+//        model.addAttribute("materialForm", new MaterialForm());
 
         return "admin-product-list";
     }
@@ -174,6 +177,7 @@ public class AdminController {
         model.addAttribute("collectionList", collectionService.getCollectionList());
         model.addAttribute("watchTypeList", watchTypeService.getWatchTypeList());
         model.addAttribute("sizeList", watchSizeService.getSizeList());
+        model.addAttribute("materialList", materialService.getMaterialList());
 
         model.addAttribute("collection", new Collection());
         model.addAttribute("watchType", new WatchType());

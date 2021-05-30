@@ -4,19 +4,16 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.util.ArrayList;
-import java.util.List;
+import java.util.Date;
 
 @Document(collection = "Cart")
 public class Cart {
     @Id
     private String _id;
     private int cartID;
-    private String CustomerID;
-    private List<Product> productList;
-
-    public Cart() {
-        this.productList = new ArrayList<>();
-    }
+    private String customerID;
+    private Date deliveryDate;
+    private String state;
 
     public int getCartID() {
         return cartID;
@@ -27,10 +24,26 @@ public class Cart {
     }
 
     public String getCustomerID() {
-        return CustomerID;
+        return customerID;
     }
 
     public void setCustomerID(String customerID) {
-        CustomerID = customerID;
+        this.customerID = customerID;
+    }
+
+    public Date getDeliveryDate() {
+        return deliveryDate;
+    }
+
+    public void setDeliveryDate(Date deliveryDate) {
+        this.deliveryDate = deliveryDate;
+    }
+
+    public String getState() {
+        return state;
+    }
+
+    public void setState(String state) {
+        this.state = state;
     }
 }

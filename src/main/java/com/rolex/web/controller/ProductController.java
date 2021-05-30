@@ -2,7 +2,7 @@ package com.rolex.web.controller;
 
 import com.rolex.web.model.Product;
 import com.rolex.web.service.ProductService;
-import com.rolex.web.viewmodel.ProductDetailViewModel;
+import com.rolex.web.viewmodel.AddToCartForm;
 import com.rolex.web.viewmodel.ProductViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -26,7 +26,8 @@ public class ProductController {
 
     @GetMapping("/product/{id}")
     public String productDetail(@PathVariable("id") String id, Model model) {
-        model.addAttribute("product", productService.findProductID(id));
-        return "productDetail";
+        model.addAttribute("addToCartForm", new AddToCartForm());
+        model.addAttribute("product", productService.getProductVMFromID(id));
+        return "product-details";
     }
 }

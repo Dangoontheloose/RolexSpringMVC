@@ -24,8 +24,10 @@
         <th>Price</th>
         <th>Stock</th>
         <th>Size</th>
+        <th>Material</th>
         <th>Type</th>
         <th>Image</th>
+        <th>Details Image</th>
     </tr>
     </thead>
     <c:forEach var="item" items="${productList}">
@@ -36,8 +38,12 @@
             <td>${item.price}</td>
             <td>${item.stock}</td>
             <td>${item.sizeValue}</td>
+            <td>${item.materialValue}</td>
             <td>${item.watchTypeValue}</td>
             <td>${item.img}</td>
+            <td><c:forEach var="imgDetails" items="${item.imgDetails}">
+                <tr><td>${imgDetails}</td></tr>
+            </c:forEach></td>
         </tr>
     </c:forEach>
 </table>
@@ -188,5 +194,28 @@
         </div>
     </form:form>
 </div>
+<table>
+    <thead>
+    <tr>
+        <th>Material ID</th>
+        <th>Material Value</th>
+    </tr>
+
+    </thead>
+    <c:forEach var="item" items="${materialList}">
+        <tr>
+            <td>${item.materialID}</td>
+            <td>${item.materialName}</td>
+<%--            <td>--%>
+<%--                <form:form action="product/delete-type-submit/${item.watchTypeID}" method="post"--%>
+<%--                           modelAttribute="typeForm">--%>
+<%--                    <form:hidden path="tID" value="${item.watchTypeID}"/>--%>
+<%--                    <input type="submit" value="Delete">--%>
+<%--                    <form:errors path="tID" cssClass="error"/>--%>
+<%--                </form:form>--%>
+<%--            </td>--%>
+        </tr>
+    </c:forEach>
+</table>
 </body>
 </html>

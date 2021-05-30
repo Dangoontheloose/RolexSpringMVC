@@ -1,10 +1,7 @@
 package com.rolex.web.service;
 
 import com.rolex.web.model.Product;
-import com.rolex.web.repository.CollectionRepository;
-import com.rolex.web.repository.ProductRepository;
-import com.rolex.web.repository.WatchSizeRepository;
-import com.rolex.web.repository.WatchTypeRepository;
+import com.rolex.web.repository.*;
 import com.rolex.web.viewmodel.ProductViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -24,6 +21,8 @@ public class ProductService {
     private WatchSizeRepository watchSizeRepository;
     @Autowired
     private WatchTypeRepository watchTypeRepository;
+    @Autowired
+    private MaterialRepository materialRepository;
 
     public List<Product> getProductList() {
         return productRepository.findAll();
@@ -78,13 +77,34 @@ public class ProductService {
             pvm.setPrice(item.getPrice());
             pvm.setStock(item.getStock());
             pvm.setImg(item.getImg());
+            pvm.setMaterialValue(materialRepository.findByMaterialID(item.getMaterialID()).getMaterialName());
 
             pvm.setSizeValue(watchSizeRepository.findBySizeID(item.getSizeID()).getSizeValue());
             pvm.setWatchTypeValue(watchTypeRepository.findByWatchTypeID(item.getWatchTypeID()).getWatchTypeValue());
+            pvm.setImgDetails(item.getImgDetails());
 
             pvmList.add(pvm);
         }
 
         return pvmList;
+    }
+    public ProductViewModel getProductVMFromID(String productID) {
+        Product product = productRepository.findFirstByProductID(productID);
+        ProductViewModel pvm = new ProductViewModel();
+
+        pvm.setProductID(product.getProductID());
+        pvm.setCollectionName(collectionRepository.findByCollectionID(product.getCollectionID()).getCollectionName());
+        pvm.setDescription(product.getDescription());
+        pvm.setPrice(product.getPrice());
+        pvm.setStock(product.getStock());
+        pvm.setImg(product.getImg());
+        pvm.setMaterialValue(materialRepository.findByMaterialID(product.getMaterialID()).getMaterialName());
+
+        pvm.setSizeValue(watchSizeRepository.findBySizeID(product.getSizeID()).getSizeValue());
+        pvm.setWatchTypeValue(watchTypeRepository.findByWatchTypeID(product.getWatchTypeID()).getWatchTypeValue());
+        pvm.setImgDetails(product.getImgDetails());
+        pvm.setDetailDescription(product.getDetailDescription());
+
+        return pvm;
     }
 }
