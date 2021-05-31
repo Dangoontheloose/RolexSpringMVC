@@ -4,6 +4,7 @@ import com.rolex.web.model.Product;
 import com.rolex.web.service.CartService;
 import com.rolex.web.service.ProductService;
 import com.rolex.web.viewmodel.AddToCartForm;
+import com.rolex.web.viewmodel.CartQuantityForm;
 import com.rolex.web.viewmodel.ProductViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -34,13 +35,24 @@ public class ProductController {
         model.addAttribute("product", productService.getProductList());
         return "home";
     }
+
     @GetMapping("/cart")
     public String cart(Model model, HttpSession session) {
         List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
         if (cartList != null) {
             model.addAttribute("cartList", cartList);
+            model.addAttribute("cartForm", new CartQuantityForm());
         }
         return "cart";
+    }
+
+    @PostMapping("/cart/update-quantity")
+    public String updateCartQuantity(CartQuantityForm cartForm, HttpSession session) {
+        List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
+        cartList = cartService.updateQuantity(cartList, cartForm);
+        session.setAttribute("cart", cartList);
+        session.setAttribute("cartSize", cartList.size());
+        return "redirect:/cart";
     }
     @GetMapping("/product/{id}")
     public String productDetail(@PathVariable("id") String id, Model model) {

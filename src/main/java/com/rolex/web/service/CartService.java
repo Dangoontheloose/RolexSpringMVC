@@ -3,6 +3,7 @@ package com.rolex.web.service;
 import com.rolex.web.model.Cart;
 import com.rolex.web.repository.CartRepository;
 import com.rolex.web.viewmodel.AddToCartForm;
+import com.rolex.web.viewmodel.CartQuantityForm;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -23,5 +24,9 @@ public class CartService {
         }
         cartList.add(addToCartForm);
         return cartList;
+    }
+
+    public List<AddToCartForm> updateQuantity(List<AddToCartForm> cartList, CartQuantityForm cartForm) {
+
     }
 }

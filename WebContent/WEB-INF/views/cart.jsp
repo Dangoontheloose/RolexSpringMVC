@@ -1,4 +1,5 @@
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%--
   Created by IntelliJ IDEA.
   User: dango
@@ -12,14 +13,19 @@
     <title>Title</title>
 </head>
 <body>
-    <h1>Cart</h1>
+<h1>Cart</h1>
+<form:form action="${pageContext.request.contextPath}/cart/update-quantity" method="post" modelAttribute="cartForm">
     <table>
-        <c:forEach var="item" items="${cartList}">
+        <c:forEach var="item" items="${cartList}" varStatus="status">
+            <form:hidden path="cartList[${status.index}]"/>
             <tr>
                 <td>${item.pID}</td>
-                <td>${item.quantity}</td>
+                <td><form:input path="cartList[${status.index}].quantity" value="${item.quantity}"/></td>
             </tr>
         </c:forEach>
     </table>
+    <input type="submit" value="Update cart">
+</form:form>
+
 </body>
 </html>
