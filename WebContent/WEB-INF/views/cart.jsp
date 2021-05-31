@@ -17,7 +17,7 @@
 <form:form action="${pageContext.request.contextPath}/cart/update-quantity" method="post" modelAttribute="cartForm">
     <table>
         <c:forEach var="item" items="${cartList}" varStatus="status">
-            <form:hidden path="cartList[${status.index}]"/>
+            <form:hidden path="cartList[${status.index}].pID" value="${item.pID}"/>
             <tr>
                 <td>${item.pID}</td>
                 <td><form:input path="cartList[${status.index}].quantity" value="${item.quantity}"/></td>
