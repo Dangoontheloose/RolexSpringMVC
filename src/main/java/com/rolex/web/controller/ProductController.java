@@ -1,11 +1,11 @@
 package com.rolex.web.controller;
 
-import com.rolex.web.model.Product;
 import com.rolex.web.service.CartService;
 import com.rolex.web.service.ProductService;
+
 import com.rolex.web.viewmodel.AddToCartForm;
 import com.rolex.web.viewmodel.CartQuantityForm;
-import com.rolex.web.viewmodel.ProductViewModel;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -54,6 +54,15 @@ public class ProductController {
         session.setAttribute("cartSize", cartList.size());
         return "redirect:/cart";
     }
+
+    @PostMapping("/move-to-checkout")
+    public String moveToCheckout(HttpSession session, Model model) {
+        if (session.getAttribute("email") != null) {
+            return "redirect:/checkout";
+        }
+        return "redirect:/login";
+    }
+
     @GetMapping("/product/{id}")
     public String productDetail(@PathVariable("id") String id, Model model) {
         model.addAttribute("addToCartForm", new AddToCartForm());
