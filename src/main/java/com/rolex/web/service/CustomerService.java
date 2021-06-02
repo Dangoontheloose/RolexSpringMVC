@@ -19,6 +19,15 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
+    public Customer getCustomerByCustomerID(String customerID) {
+        return customerRepository.findByCustomerID(customerID);
+    }
+
+    public String getCustomerIDByEmail(String email) {
+        Customer customer = customerRepository.findByEmail(email);
+        return customer.getCustomerID();
+    }
+
     public void registerCustomer(RegisterViewModel registerViewModel) {
         Customer customer = new Customer();
         customer.setName(String.format("%s %s", registerViewModel.getFirstName(), registerViewModel.getLastName()));
@@ -35,6 +44,7 @@ public class CustomerService {
         Customer customer = customerRepository.findByEmail(email);
         return customer == null;
     }
+
     public boolean passwordCorrect(String email, String password) {
         return customerRepository.findByEmailAndPassword(email, password) != null;
     }
