@@ -192,6 +192,10 @@ thead {
 .table thead th {
   border-bottom: 0;
 }
+.table tbody tr > td {
+  width: 250px;
+  text-overflow: ellipsis;
+}
 .tm-avatar {
   width: 345px;
 }
@@ -318,9 +322,6 @@ thead {
 }
 .custom-file-label {
   border-radius: 0;
-}
-.table td {
-  text-overflow: ellipsis;
 }
 .table td,
 .table th {
