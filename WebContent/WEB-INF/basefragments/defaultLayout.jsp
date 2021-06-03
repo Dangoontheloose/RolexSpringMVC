@@ -8,6 +8,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
+    <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/admin.css">
 </head>
 <body>
     <tiles:insertAttribute name="header" />
