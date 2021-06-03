@@ -10,8 +10,8 @@
                             <div class="product-main">
                                 <a href="${pageContext.request.contextPath}/product/${item.productID}" class="mask"><img class="img-responsive zoom-img" src="${item.img}" alt="" /></a>
                                 <div class="product-bottom">
-                                    <h3>${item.collectionID}</h3>
-                                    <p>${item.productID}</p>
+                                    <h3>${item.productName}</h3>
+                                    <p>${item.collectionName}</p>
                                     <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">${item.price}</span></h4>
                                 </div>
                             </div>

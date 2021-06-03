@@ -5,7 +5,7 @@ import com.rolex.web.model.WatchSize;
 import com.rolex.web.model.WatchType;
 import com.rolex.web.service.*;
 import com.rolex.web.viewmodel.CollectionForm;
-import com.rolex.web.viewmodel.ProductViewModel;
+import com.rolex.web.viewmodel.AdminProductVM;
 import com.rolex.web.viewmodel.SizeForm;
 import com.rolex.web.viewmodel.TypeForm;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -69,7 +69,7 @@ public class AdminController {
 
     @GetMapping("/product/add")
     public String addProduct(Model model) {
-        model.addAttribute("productForm", new ProductViewModel());
+        model.addAttribute("productForm", new AdminProductVM());
 
         model.addAttribute("sizeList", watchSizeService.getSizeList());
         model.addAttribute("typeList", watchTypeService.getWatchTypeList());
@@ -80,7 +80,7 @@ public class AdminController {
 
     // TODO: Add Edit > Product
     @PostMapping("/product/add-product-submit")
-    public String postAddProduct(@Valid @ModelAttribute("productForm") ProductViewModel productForm, BindingResult br, Model model) {
+    public String postAddProduct(@Valid @ModelAttribute("productForm") AdminProductVM productForm, BindingResult br, Model model) {
         if(!br.hasErrors()) {
             productService.addProduct(productForm);
             return "redirect:/admin/product";

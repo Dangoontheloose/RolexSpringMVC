@@ -1,6 +1,7 @@
 package com.rolex.web.viewmodel;
 
-public class ProductViewModel {
+public class AdminProductVM {
+    private String productName;
     private String productID;
     private String collectionName;
     private String description;
@@ -99,5 +100,13 @@ public class ProductViewModel {
 
     public void setDetailDescription(String[] detailDescription) {
         this.detailDescription = detailDescription;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }
