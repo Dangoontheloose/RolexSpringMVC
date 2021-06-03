@@ -43,19 +43,25 @@
         <put-attribute name="body" value="/WEB-INF/views/admin-product-add.jsp"/>
     </definition>
 <!-- Admin Product Collection Add Page -->
-    <definition name="admin-collection-add" extends="base.redirect">
+    <definition name="admin-collection-add" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
     </definition>
+<!--    Product Detail Page-->
+    <definition name="product-details" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/product-details.jsp"/>
+    </definition>
+<!--    Checkout-->
+    <definition name="checkout" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/checkout.jsp"/>
+    </definition>
+
+
+
+<!--    Redirect page-->
     <definition name="login-success" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/login-success.jsp"/>
     </definition>
     <definition name="register-success" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/register-success.jsp"/>
     </definition>
-<!--    Product Detail Page-->
-    <definition name="product-details" extends="base.definition">
-        <put-attribute name="body" value="/WEB-INF/views/product-details.jsp"/>
-    </definition>
-
-
 </tiles-definitions>

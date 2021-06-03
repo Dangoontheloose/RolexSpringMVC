@@ -66,9 +66,9 @@ public class CartController {
         return "redirect:/";
     }
 
-    @GetMapping("/checkout")
-    public String checkout(Model model, HttpSession session) {
-        model.addAttribute("customerInfo", customerService.getCustomerByCustomerID(session.getAttribute("id").toString()));
-        return "checkout";
-    }
+//    @GetMapping("/checkout")
+//    public String checkout(Model model, HttpSession session) {
+//        model.addAttribute("customerInfo", customerService.getCustomerByCustomerID(session.getAttribute("id").toString()));
+//        return "checkout";
+//    }
 }
