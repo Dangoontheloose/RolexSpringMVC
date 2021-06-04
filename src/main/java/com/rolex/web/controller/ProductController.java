@@ -45,7 +45,7 @@ public class ProductController {
         return "about";
     }
     @GetMapping("/product")
-    public String home(Model model, HttpSession session) {
+    public String product(Model model, HttpSession session) {
         model.addAttribute("collectionList", collectionService.getCollectionList());
         model.addAttribute("materialList", materialService.getMaterialList());
         model.addAttribute("sizeList", watchSizeService.getSizeList());
@@ -68,7 +68,7 @@ public class ProductController {
     public String applyFilter(Filter filter, Model model, HttpSession session) {
         session.setAttribute("filter", filter);
 
-        return "redirect:/";
+        return "redirect:/product";
     }
 
     @GetMapping("/product/{id}")

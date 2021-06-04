@@ -47,9 +47,9 @@
             <ul class="megamenu skyblue">
                 <li><a class="color2" href="${pageContext.request.contextPath}/">Home</a>
                 </li>
-                <li><a class="color2" href="#">Men</a>
+                <li><a class="color2" href="${pageContext.request.contextPath}/product">Men</a>
                 </li>
-                <li><a class="" href="#">Womens</a></li>
+                <li><a class="" href="${pageContext.request.contextPath}/product">Womens</a></li>
                 <li><a class="" href="${pageContext.request.contextPath}/about">About</a></li>
                 <div class="clearfix"></div>
             </ul>
