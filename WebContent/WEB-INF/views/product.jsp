@@ -3,6 +3,7 @@
 <%@ page session="false" %>
 <div class="product">
     <div class="container">
+        <h3>Product</h3>
         <div class="row">
             <div class="col-md-9 prdt-left">
                 <div class="row product-one">
@@ -73,7 +74,11 @@
                         </div>
                     </section>
                 </div>
-                    <input type="submit" value="Apply filter">
+                    <div>
+                        <div style="margin-top: 10px" class="account-top">
+                            <input type="submit" value="Apply filter">
+                        </div>
+                    </div>
                 </form:form>
             </div>
             <div class="clearfix"></div>

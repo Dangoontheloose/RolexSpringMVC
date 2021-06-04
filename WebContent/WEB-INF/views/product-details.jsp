@@ -26,10 +26,8 @@
                     <h2 class="quick">Quick Overview:</h2>
                     <p class="quick_desc">${product.description}</p>
                     <ul class="size">
-                        <h3>Size</h3>
-                        <li>${product.sizeValue}</li>
-                        <h3>Type</h3>
-                        <li>${product.watchTypeValue}</li>
+                        <h3>Size: <span>${product.sizeValue}</span></h3>
+                        <h3>Type: <span>${product.watchTypeValue}</span></h3>
                     </ul>
                     <div class="quantity_box">
                         <ul class="product-qty">
@@ -43,7 +41,9 @@
                         </ul>
                         <div class="clearfix"></div>
                     </div>
-                    <input type="submit" value="Add to Cart">
+                    <div class="account-top">
+                        <input type="submit" value="Add to cart">
+                    </div>
                 </div>
                 <div class="clearfix"> </div>
             </div>
