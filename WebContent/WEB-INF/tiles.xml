@@ -16,7 +16,15 @@
     </definition>
 <!--    Home Page-->
     <definition name="home" extends="base.definition">
-        <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
+    </definition>
+<!--    About Page-->
+    <definition name="about" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/about.jsp"/>
+    </definition>
+<!--    Product Page-->
+    <definition name="product" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/product.jsp"/>
     </definition>
 <!--    Register Page-->
     <definition name="register" extends="base.definition">

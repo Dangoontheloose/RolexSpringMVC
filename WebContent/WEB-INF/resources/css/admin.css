@@ -376,20 +376,19 @@ thead {
   color: #000;
 }
 input[type="checkbox"] {
-  cursor: pointer;
-  -webkit-appearance: none;
-  appearance: none;
-  background-position: center;
-  border-radius: 50%;
-  box-sizing: border-box;
-  position: relative;
-  box-sizing: content-box;
-  width: 24px;
-  height: 24px;
-  transition: all 0.1s linear;
+  position: absolute;
+  top: 5px;
+  left: 0;
+  display: block;
+  width: 17px;
+  height: 17px;
+  outline: none;
+  border-width: 2px;
+  border-style: solid;
+  background: #fff;
 }
 input[type="checkbox"]:checked {
-  background: url(../img/check-mark.png) #394e64 center no-repeat;
+  background: url(../images/tick.png) #394e64 center no-repeat;
 }
 input[type="checkbox"]:focus {
   outline: 0 none;
@@ -432,20 +431,12 @@ input[type="checkbox"]:focus {
 .custom-select {
   width: 100%;
   border: none;
-  color: 313235;
+  color: #313235;
   height: 50px;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  -ms-appearance: none;
-  -o-appearance: none;
   appearance: none;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  -ms-border-radius: 0;
-  -o-border-radius: 0;
   border-radius: 0;
   padding: 15px;
-  background: url(../img/arrow-down.png) 98% no-repeat #aaa;
+  /*background: url(../img/arrow-down.png) 98% no-repeat #aaa;*/
 }
 .custom-select:focus {
   outline: 0;
