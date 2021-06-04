@@ -2,6 +2,7 @@ package com.rolex.web.controller;
 
 
 import com.rolex.web.service.CustomerService;
+import com.rolex.web.viewmodel.CustomerProfileEditVM;
 import com.rolex.web.viewmodel.LoginForm;
 import com.rolex.web.viewmodel.RegisterViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,10 +28,11 @@ public class CustomerController {
         return new RegisterViewModel();
     }
 
-    @GetMapping("/customers")
-    public String customer(Model model) {
-        model.addAttribute("customerList", customerService.getCustomerList());
-        return "customer-list";
+    @PostMapping("/profile/update-from-checkout")
+    public String updateProfile(CustomerProfileEditVM customerProfileEditVM) {
+        customerService.updateCustomer(customerProfileEditVM);
+
+        return "redirect:/checkout";
     }
 
     @GetMapping("/register")

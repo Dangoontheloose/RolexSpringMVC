@@ -31,6 +31,17 @@ public class CustomerService {
             setPhoneNum(customer.getPhoneNum());
         }};
     }
+    public void updateCustomer(CustomerProfileEditVM customerProfileEditVM) {
+        Customer customer = customerRepository.findByCustomerID(customerProfileEditVM.getCustomerID());
+        if (customer != null) {
+            customer.setAddress(customerProfileEditVM.getAddress());
+            customer.setEmail(customerProfileEditVM.getEmail());
+            customer.setPhoneNum(customerProfileEditVM.getPhoneNum());
+            customer.setName(customerProfileEditVM.getName());
+
+            customerRepository.save(customer);
+        }
+    }
 
     public String getCustomerIDByEmail(String email) {
         Customer customer = customerRepository.findByEmail(email);

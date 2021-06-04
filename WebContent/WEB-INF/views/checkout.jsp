@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h3>Billing Details</h3>
-                    <form:form class="row contact_form" action="${pageContext.request.contextPath}/profile/update"
+                    <form:form class="row contact_form" action="${pageContext.request.contextPath}/profile/update-from-checkout"
                                method="post" modelAttribute="personalInfo" novalidate="novalidate">
                         <form:hidden path="customerID" value="${customerID}"/>
                         <div class="col-md-12 form-group p_star">
