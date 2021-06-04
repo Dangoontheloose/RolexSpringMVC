@@ -62,6 +62,10 @@
     <definition name="checkout" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/checkout.jsp"/>
     </definition>
+<!--    Order-->
+    <definition name="order" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/order.jsp"/>
+    </definition>
 
 
 
@@ -71,5 +75,8 @@
     </definition>
     <definition name="register-success" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/register-success.jsp"/>
+    </definition>
+    <definition name="checkout-result" extends="base.redirect">
+        <put-attribute name="body" value="/WEB-INF/views/checkout-result.jsp"/>
     </definition>
 </tiles-definitions>

@@ -65,10 +65,12 @@ public class CartController {
 
         return "redirect:/";
     }
-
-//    @GetMapping("/checkout")
-//    public String checkout(Model model, HttpSession session) {
-//        model.addAttribute("customerInfo", customerService.getCustomerByCustomerID(session.getAttribute("id").toString()));
-//        return "checkout";
-//    }
+    @GetMapping("/order")
+    public String order(Model model,  HttpSession httpSession) {
+        if (httpSession.getAttribute("email") == null) {
+            return "redirect:/login";
+        }
+        model.addAttribute("cart", cartService.getOrderFromCustomerID((String) httpSession.getAttribute("id")));
+        model.addAttribute("cartList", cartService.getCartListFromCustomerID((String) httpSession.getAttribute("id")));
+    }
 }
