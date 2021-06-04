@@ -44,7 +44,7 @@ public class CheckoutController {
         }
         List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
         if (cartList == null) {
-            return "redirect:/home";
+            return "redirect:/";
         }
         model.addAttribute("personalInfo", customerService.getCustomerByCustomerID((String) session.getAttribute("id")));
         model.addAttribute("checkoutInfo", cartService.getCartFromSession(cartList));
@@ -55,19 +55,11 @@ public class CheckoutController {
     }
 
     @PostMapping("/charge")
-    public String charge(ChargeRequest chargeRequest) throws StripeException {
-        chargeRequest.setDescription("Example charge");
-        chargeRequest.setCurrency(ChargeRequest.Currency.VND);
-        Charge charge = paymentsService.charge(chargeRequest);
+    public String charge(HttpSession session){
+        List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
+        cartService.createOrder((String) session.getAttribute("id"), cartList);
+        session.removeAttribute("cart");
 
-
-        return "redirect:/update-order";
+        return "redirect:/order";
     }
-
-    @ExceptionHandler(StripeException.class)
-    public String handleError(Model model, StripeException ex) {
-        model.addAttribute("error", ex.getMessage());
-        return "checkout-result";
-    }
-
 }

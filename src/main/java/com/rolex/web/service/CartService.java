@@ -2,13 +2,13 @@ package com.rolex.web.service;
 
 import com.rolex.web.model.Cart;
 import com.rolex.web.model.CartDetail;
+import com.rolex.web.model.Customer;
 import com.rolex.web.model.Product;
 import com.rolex.web.repository.CartDetailRepository;
 import com.rolex.web.repository.CartRepository;
+import com.rolex.web.repository.CustomerRepository;
 import com.rolex.web.repository.ProductRepository;
-import com.rolex.web.viewmodel.AddToCartForm;
-import com.rolex.web.viewmodel.CartQuantityForm;
-import com.rolex.web.viewmodel.CheckoutProductVM;
+import com.rolex.web.viewmodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -26,6 +26,8 @@ public class CartService {
     ProductRepository productRepository;
     @Autowired
     CartDetailRepository cartDetailRepository;
+    @Autowired
+    CustomerRepository customerRepository;
 
 
     public List<AddToCartForm> addToTempCart(List<AddToCartForm> cartList, AddToCartForm addToCartForm) {
@@ -87,6 +89,16 @@ public class CartService {
         return total;
     }
 
+    public int getTotalCost(String cartID) {
+        int total = 0;
+        List<CartDetail> cartDetails = cartDetailRepository.findAllByCartID(cartID);
+        for (CartDetail item :
+                cartDetails) {
+            total += item.getQuantity() * productRepository.findFirstByProductID(item.getProductID()).getPrice();
+        }
+        return total;
+    }
+
     public void createOrder(String customerID, List<AddToCartForm> cartList) {
         Cart cart = new Cart() {{
             setCustomerID(customerID);
@@ -104,5 +116,35 @@ public class CartService {
             }};
             cartDetailRepository.insert(cartDetail);
         }
+    }
+
+    public OrderVM getOrderFromCustomerID(String customerID) {
+        Cart cart = cartRepository.findByCustomerID(customerID);
+        Customer customer = customerRepository.findByCustomerID(customerID);
+
+        return new OrderVM(){{
+            setCartID(cart.getCartID());
+            setState(cart.getState());
+            setDeliveryDate(cart.getDeliveryDate());
+            setAddress(customer.getAddress());
+            setTotal(getTotalCost(cart.getCartID()));
+        }};
+
+    }
+
+    public List<OrderCartDetailVM> getCartListFromCustomerID(String customerID) {
+        Cart cart = cartRepository.findByCustomerID(customerID);
+        List<OrderCartDetailVM> cartDetailVMS = new ArrayList<>();
+        List<CartDetail> cartDetails = cartDetailRepository.findAllByCartID(cart.getCartID());
+        for (CartDetail item :
+                cartDetails) {
+            OrderCartDetailVM ovm = new OrderCartDetailVM(){{
+                setPrice(productRepository.findFirstByProductID(item.getProductID()).getPrice());
+                setQuantity(item.getQuantity());
+            }};
+            cartDetailVMS.add(ovm);
+
+        }
+        return cartDetailVMS;
     }
 }

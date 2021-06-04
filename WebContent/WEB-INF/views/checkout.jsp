@@ -71,7 +71,7 @@
                                 <div class="check"></div>
                             </div>
                         </div>
-                        <form action='${pageContext.request.contextPath}/charge' method='POST' id='checkout-form'>
+                        <form action="${pageContext.request.contextPath}/charge" method="post" id="checkout-form">
                             <input type='hidden' value='${total/100}' name='amount'/>
                             <script
                                     src='https://checkout.stripe.com/checkout.js'
