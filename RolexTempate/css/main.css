@@ -1861,3 +1861,103 @@ ul.content-home li .item-html button:hover {
   display: flex;
   width: 20%;
 }
+/* About */
+.about-details h1 {
+  text-align: center;
+  font-weight: bold;
+}
+.about-details .about-details-cap h4 {
+  font-size: 30px;
+  font-family: "Josefin Sans", sans-serif;
+  font-weight: 700;
+  margin-bottom: 30px;
+  color: #000a2d;
+  display: inline-block;
+  position: relative;
+  padding-left: 68px;
+}
+.about-details .about-details-cap h4::before {
+  position: absolute;
+  content: "";
+  width: 54px;
+  height: 2px;
+  background: #eb566c;
+  top: 0;
+  left: 0px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.about-details .about-details-cap p {
+  color: #464d65;
+  font-size: 14px;
+}
+.video-area {
+  background-image: url(https://content.rolex.com/dam/new-watches-2020/new-datejust/new-datejust-beauty-watch.jpg);
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-top: 100px;
+}
+.agent h2 {
+  text-align: center;
+  font-size: 50px;
+  font-weight: 400;
+  padding: 30px 0;
+}
+.agent__content {
+  width: 80%;
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  margin-bottom: 50px;
+}
+.agent__info {
+  width: 25%;
+  margin: 0 15px;
+}
+.agent__info:hover .agent__text h4 {
+  color: #f9debe;
+}
+.agent__info img {
+  width: 100%;
+  height: 304px;
+  display: block;
+}
+.agent__text {
+  background: rgba(0, 0, 0, 0.79);
+  padding: 1.5em 1em;
+  text-align: center;
+  width: 100%;
+  transition: 0.5s all;
+}
+.agent__text ul,
+li {
+  display: inline-block;
+  margin: 0 10px;
+}
+.agent__text i {
+  text-align: center;
+  height: 30px;
+  width: 30px;
+  line-height: 30px;
+  border: 2px solid #fff;
+  background: none;
+  color: #fff;
+}
+
+.agent__text p {
+  color: #ffffff;
+  font-size: 0.9em;
+  padding: 10px 0;
+}
+.agent__text h4 {
+  margin: 0;
+  color: #fff;
+  font-size: 1.5em;
+  margin-bottom: 5px;
+  letter-spacing: 1px;
+}
