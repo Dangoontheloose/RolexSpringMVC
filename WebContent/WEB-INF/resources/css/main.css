@@ -509,7 +509,7 @@ img.img-responsive {
     margin-top: 2.6em;
 }
 .w_sidebar {
-    border: 1px solid #ebebeb;
+    border: 8px solid #ebebeb;
 }
 .w_sidebar h3 {
     padding: 0 20px 10px;
@@ -844,6 +844,11 @@ ul.size h3 {
     font-size: 1.2em;
     text-transform: uppercase;
     margin-bottom: 15px;
+}
+ul.size h3 > span {
+    color: #999;
+    font-size: 1em;
+    text-transform: none;
 }
 ul.size li {
     display: inline-block;
