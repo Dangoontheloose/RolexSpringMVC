@@ -503,7 +503,7 @@ img.img-responsive {
     margin-top: 2.6em;
 }
 .w_sidebar {
-    border: 1px solid #ebebeb;
+    border: 5px solid #ebebeb;
 }
 .w_sidebar h3 {
     padding: 0 20px 10px;
@@ -1721,4 +1721,9 @@ li {
 }
 .confirmation_part .order_details_iner th {
     font-weight: 500;
+}
+/*Rewrite bootstrap*/
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:6px;
 }

@@ -27,52 +27,54 @@
                     <section  class="sky-form">
                         <h4>Categories</h4>
                         <div class="row1 scroll-pane">
-                            <div class="col col-4">
-                                <c:forEach var="item" items="${typeList}" varStatus="status">
-                                    <form:checkbox path="typeFilter" value="${item.watchTypeValue}"/>${item.watchTypeValue}
-                                </c:forEach>
-                            </div>
+                            <c:forEach var="item" items="${typeList}" varStatus="status">
+                                <div class="row no-gutters">
+                                    <div class="col-2">
+                                        <form:checkbox class="checkbox" path="typeFilter" value="${item.watchTypeValue}"/><i></i>
+                                    </div>
+                                    <div class="col-10">${item.watchTypeValue}</div> </div>
+                            </c:forEach>
                         </div>
                     </section>
                     <section  class="sky-form">
                         <h4>Collection</h4>
                         <div class="row1 row2 scroll-pane">
-                            <div class="col col-12">
-                                <c:forEach var="item" items="${collectionList}" varStatus="status">
-                                    <form:checkbox path="collectionFilter" value="${item.collectionName}"/><i></i>${item.collectionName}
-                                </c:forEach>
-                            </div>
+                            <c:forEach var="item" items="${collectionList}" varStatus="status">
+                                <div class="row no-gutters">
+                                    <div class="col-2">
+                                        <form:checkbox class="checkbox" path="collectionFilter" value="${item.collectionName}"/><i></i>
+                                    </div>
+                                    <div class="col-10">${item.collectionName}</div> </div>
+                            </c:forEach>
                         </div>
                     </section>
                     <section  class="sky-form">
                         <h4>Material</h4>
                         <div class="row1 row2 scroll-pane">
-                            <div class="col col-12">
-                                <c:forEach var="item" items="${materialList}" varStatus="status">
-                                    <form:checkbox path="materialFilter" value="${item.materialName}"/><i></i>${item.materialName}
-                                </c:forEach>
+                            <c:forEach var="item" items="${materialList}" varStatus="status">
+                                <div class="row no-gutters">
+                            <div class="col-2">
+                                    <form:checkbox class="checkbox" path="materialFilter" value="${item.materialName}"/><i></i>
                             </div>
+                                <div class="col-10">${item.materialName}</div> </div>
+                            </c:forEach>
                         </div>
                     </section>
                     <section  class="sky-form">
                         <h4>Size</h4>
                         <div class="row1 row2 scroll-pane">
-                            <div class="col col-12">
-                                <c:forEach var="item" items="${sizeList}" varStatus="status">
-                                    <form:checkbox path="sizeFilter" value="${item.sizeValue}"/><i></i>${item.sizeValue}
-                                </c:forEach>
-
-                            </div>
+                            <c:forEach var="item" items="${sizeList}" varStatus="status">
+                                <div class="row no-gutters">
+                                    <div class="col-2">
+                                        <form:checkbox class="checkbox" path="sizeFilter" value="${item.sizeValue}"/><i></i>
+                                    </div>
+                                    <div class="col-10">${item.sizeValue}</div> </div>
+                            </c:forEach>
                         </div>
                     </section>
-
-
                 </div>
-                    <section class="sky-form">
-                        <input type="submit" value="Apply filter">
-                    </section>
+                    <input type="submit" value="Apply filter">
                 </form:form>
-
             </div>
             <div class="clearfix"></div>
         </div>
