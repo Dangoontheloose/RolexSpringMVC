@@ -45,12 +45,12 @@
     <div class="header_bottom">
         <div class="menu">
             <ul class="megamenu skyblue">
-                <li><a class="color2" href="#">Mens</a>
+                <li><a class="color2" href="#">Home</a>
                 </li>
-                <li><a class="color2" href="#">Womens</a>
+                <li><a class="color2" href="#">Men</a>
                 </li>
-                <li><a class="color10" href="#">Brands</a></li>
-                <li><a class="color7" href="#">News</a></li>
+                <li><a class="" href="#">Womens</a></li>
+                <li><a class="" href="#">About</a></li>
                 <div class="clearfix"></div>
             </ul>
         </div>

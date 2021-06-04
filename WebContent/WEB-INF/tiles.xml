@@ -14,8 +14,12 @@
                 template="/WEB-INF/basefragments/redirectLayout.jsp">
         <put-attribute name="body" value="" />
     </definition>
-<!--    Home Page-->
+<!--    Home page-->
     <definition name="home" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
+    </definition>
+<!--    Product Page-->
+    <definition name="product" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/home.jsp"/>
     </definition>
 <!--    Register Page-->

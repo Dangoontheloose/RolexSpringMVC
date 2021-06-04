@@ -36,8 +36,11 @@ public class ProductController {
         watchSizeService = new WatchSizeService();
         watchTypeService = new WatchTypeService();
     }
-
     @GetMapping("/")
+    public String index(Model model){
+        return "home";
+    }
+    @GetMapping("/product")
     public String home(Model model, HttpSession session) {
         model.addAttribute("collectionList", collectionService.getCollectionList());
         model.addAttribute("materialList", materialService.getMaterialList());
@@ -49,12 +52,12 @@ public class ProductController {
         if (filter != null) {
             model.addAttribute("filter", filter);
             model.addAttribute("product", productService.getProductListWithFilter(filter));
-            return "home";
+            return "product";
         }
         model.addAttribute("filter", new Filter());
         model.addAttribute("product", productService.getProductListWithFilter());
 
-        return "home";
+        return "product";
     }
 
     @PostMapping("/apply-filter")
