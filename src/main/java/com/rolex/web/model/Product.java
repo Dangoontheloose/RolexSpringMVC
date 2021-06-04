@@ -8,6 +8,7 @@ public class Product {
     @Id
     private String _id;
     private String productID;
+    private String productName;
     private int price;
     private String description;
     private int stock;
@@ -105,5 +106,13 @@ public class Product {
 
     public void setDetailDescription(String[] detailDescription) {
         this.detailDescription = detailDescription;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

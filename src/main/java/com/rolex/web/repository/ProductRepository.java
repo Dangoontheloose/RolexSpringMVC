@@ -11,10 +11,8 @@ import java.util.List;
 @Transactional
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String> {
-//    @Query("{ 'collectionID': ?0}")
     List<Product> findByCollectionID(int collectionID);
+
     Product findFirstByProductID(String productID);
     Product findFirstByCollectionID(int collectionID);
-    @Query("{ 'price': }")
-    List<Product> findByPriceGreaterThan(int price);
 }

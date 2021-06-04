@@ -18,7 +18,7 @@
                     <div class="clearfix"></div>
                 </div>
                 <div class="cont1 span_2_of_a1 simpleCart_shelfItem">
-                    <h1>Explorer</h1>
+                    <h1>${product.productName}</h1>
                     <p class="availability">Availability: <span class="color">In stock</span></p>
                     <div class="price_single">
                         <span class="">${product.price} VND</span>

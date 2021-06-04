@@ -15,5 +15,6 @@ import java.util.List;
 @Repository
 public interface CustomerRepository extends MongoRepository<Customer, String> {
     Customer findByEmail(String email);
+    Customer findByCustomerID(String customerID);
     Customer findByEmailAndPassword(String email, String password);
 }

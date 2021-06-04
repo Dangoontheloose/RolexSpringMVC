@@ -8,7 +8,6 @@ import org.springframework.web.servlet.config.annotation.DefaultServletHandlerCo
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
 import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurerAdapter;
-import org.springframework.web.servlet.view.InternalResourceViewResolver;
 import org.springframework.web.servlet.view.tiles3.TilesConfigurer;
 import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 
@@ -16,16 +15,6 @@ import org.springframework.web.servlet.view.tiles3.TilesViewResolver;
 @EnableWebMvc
 @ComponentScan("com.rolex.web")
 public class WebConfig extends WebMvcConfigurerAdapter {
-
-//    @Bean
-//    public ViewResolver viewResolver() {
-//        InternalResourceViewResolver viewResolver =
-//                new InternalResourceViewResolver();
-//        viewResolver.setPrefix("/WEB-INF/views/");
-//        viewResolver.setSuffix(".jsp");
-//        viewResolver.setExposeContextBeansAsAttributes(true);
-//        return viewResolver;
-//    }
     @Bean
     public TilesConfigurer getTilesConfigurer() {
         TilesConfigurer tilesConfigurer = new TilesConfigurer();
@@ -38,6 +27,7 @@ public class WebConfig extends WebMvcConfigurerAdapter {
         TilesViewResolver viewResolver = new TilesViewResolver();
         return viewResolver;
     }
+
     @Override
     public void addResourceHandlers(ResourceHandlerRegistry registry) {
         registry.addResourceHandler("/resources/**").addResourceLocations("/WEB-INF/resources/");

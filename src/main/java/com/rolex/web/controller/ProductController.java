@@ -1,10 +1,10 @@
 package com.rolex.web.controller;
 
-import com.rolex.web.model.Product;
-import com.rolex.web.service.CartService;
-import com.rolex.web.service.ProductService;
+import com.rolex.web.service.*;
+
 import com.rolex.web.viewmodel.AddToCartForm;
-import com.rolex.web.viewmodel.ProductViewModel;
+
+import com.rolex.web.viewmodel.Filter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -13,8 +13,6 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
 
 import javax.servlet.http.HttpSession;
-import java.util.ArrayList;
-import java.util.List;
 
 
 @Controller
@@ -22,43 +20,54 @@ public class ProductController {
     @Autowired
     private final ProductService productService;
     @Autowired
-    private final CartService cartService;
+    private final CollectionService collectionService;
+    @Autowired
+    private final MaterialService materialService;
+    @Autowired
+    private final WatchSizeService watchSizeService;
+    @Autowired
+    private final WatchTypeService watchTypeService;
+
 
     public ProductController() {
         productService = new ProductService();
-        cartService = new CartService();
+        collectionService = new CollectionService();
+        materialService = new MaterialService();
+        watchSizeService = new WatchSizeService();
+        watchTypeService = new WatchTypeService();
     }
 
     @GetMapping("/")
-    public String home(Model model) {
-        model.addAttribute("product", productService.getProductList());
+    public String home(Model model, HttpSession session) {
+        model.addAttribute("collectionList", collectionService.getCollectionList());
+        model.addAttribute("materialList", materialService.getMaterialList());
+        model.addAttribute("sizeList", watchSizeService.getSizeList());
+        model.addAttribute("typeList", watchTypeService.getWatchTypeList());
+
+        Filter filter = (Filter) session.getAttribute("filter");
+
+        if (filter != null) {
+            model.addAttribute("filter", filter);
+            model.addAttribute("product", productService.getProductListWithFilter(filter));
+            return "home";
+        }
+        model.addAttribute("filter", new Filter());
+        model.addAttribute("product", productService.getProductListWithFilter());
+
         return "home";
     }
-    @GetMapping("/cart")
-    public String cart(Model model, HttpSession session) {
-        List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
-        if (cartList != null) {
-            model.addAttribute("cartList", cartList);
-        }
-        return "cart";
+
+    @PostMapping("/apply-filter")
+    public String applyFilter(Filter filter, Model model, HttpSession session) {
+        session.setAttribute("filter", filter);
+
+        return "redirect:/";
     }
+
     @GetMapping("/product/{id}")
     public String productDetail(@PathVariable("id") String id, Model model) {
         model.addAttribute("addToCartForm", new AddToCartForm());
         model.addAttribute("product", productService.getProductVMFromID(id));
         return "product-details";
-    }
-
-    @PostMapping("/product/add-to-cart")
-    public String addToCart(AddToCartForm addToCartForm, HttpSession session) {
-        List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
-        if (cartList == null) {
-            cartList = new ArrayList<>();
-        }
-            cartList = cartService.addToTempCart(cartList, addToCartForm);
-            session.setAttribute("cart", cartList);
-            session.setAttribute("cartSize", cartList.size());
-
-            return "redirect:/";
     }
 }
