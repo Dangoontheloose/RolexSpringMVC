@@ -64,4 +64,7 @@
     <definition name="register-success" extends="base.redirect">
         <put-attribute name="body" value="/WEB-INF/views/register-success.jsp"/>
     </definition>
+    <definition name="checkout-result" extends="base.redirect">
+        <put-attribute name="body" value="/WEB-INF/views/checkout-result.jsp"/>
+    </definition>
 </tiles-definitions>

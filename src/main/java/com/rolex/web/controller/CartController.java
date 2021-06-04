@@ -65,10 +65,12 @@ public class CartController {
 
         return "redirect:/";
     }
+    @GetMapping("/update-order")
+    public String updateOrder(HttpSession session) {
+        List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
+        cartService.createOrder((String) session.getAttribute("id"), cartList);
+        session.removeAttribute("cart");
 
-//    @GetMapping("/checkout")
-//    public String checkout(Model model, HttpSession session) {
-//        model.addAttribute("customerInfo", customerService.getCustomerByCustomerID(session.getAttribute("id").toString()));
-//        return "checkout";
-//    }
+        return "order";
+    }
 }

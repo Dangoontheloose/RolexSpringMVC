@@ -2,6 +2,7 @@ package com.rolex.web.service;
 
 import com.rolex.web.model.Customer;
 import com.rolex.web.repository.CustomerRepository;
+import com.rolex.web.viewmodel.CustomerProfileEditVM;
 import com.rolex.web.viewmodel.RegisterViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -19,8 +20,16 @@ public class CustomerService {
         return customerRepository.findAll();
     }
 
-    public Customer getCustomerByCustomerID(String customerID) {
-        return customerRepository.findByCustomerID(customerID);
+    public CustomerProfileEditVM getCustomerByCustomerID(String customerID) {
+        Customer customer = customerRepository.findByCustomerID(customerID);
+
+        return new CustomerProfileEditVM() {{
+            setCustomerID(customerID);
+            setName(customer.getName());
+            setAddress(customer.getAddress());
+            setEmail(customer.getEmail());
+            setPhoneNum(customer.getPhoneNum());
+        }};
     }
 
     public String getCustomerIDByEmail(String email) {
