@@ -3,7 +3,7 @@
 <div class="banner">
     <div class="container">
         <div class="logo">
-            <h1><a style="text-decoration: none" href="#"><span class="m_1">R</span>olex</a></h1>
+            <h1><a style="text-decoration: none" href="${pageContext.request.contextPath}"><span class="m_1">R</span>olex</a></h1>
         </div>
         <div class="header_top">
             <div class="header_top_left">

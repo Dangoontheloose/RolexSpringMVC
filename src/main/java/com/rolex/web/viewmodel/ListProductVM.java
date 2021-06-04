@@ -6,6 +6,9 @@ public class ListProductVM {
     private int price;
     private String img;
     private String collectionName;
+    private String typeValue;
+    private int sizeValue;
+    private String materialValue;
 
     public String getProductName() {
         return productName;
@@ -45,5 +48,29 @@ public class ListProductVM {
 
     public void setImg(String img) {
         this.img = img;
+    }
+
+    public String getMaterialValue() {
+        return materialValue;
+    }
+
+    public void setMaterialValue(String materialValue) {
+        this.materialValue = materialValue;
+    }
+
+    public int getSizeValue() {
+        return sizeValue;
+    }
+
+    public void setSizeValue(int sizeValue) {
+        this.sizeValue = sizeValue;
+    }
+
+    public String getTypeValue() {
+        return typeValue;
+    }
+
+    public void setTypeValue(String typeValue) {
+        this.typeValue = typeValue;
     }
 }

@@ -379,7 +379,6 @@ input[type="checkbox"] {
   cursor: pointer;
   -webkit-appearance: none;
   appearance: none;
-  background-color: #394e64;
   background-position: center;
   border-radius: 50%;
   box-sizing: border-box;
