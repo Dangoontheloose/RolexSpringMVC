@@ -40,6 +40,10 @@ public class ProductController {
     public String index(Model model){
         return "home";
     }
+    @GetMapping("/about")
+    public String about(Model model){
+        return "about";
+    }
     @GetMapping("/product")
     public String home(Model model, HttpSession session) {
         model.addAttribute("collectionList", collectionService.getCollectionList());
