@@ -12,7 +12,7 @@
     <div class="container">
         <ul class="row content-home">
             <li class="col-5">
-                <a href="#" class="item-link" title="">
+                <a href="" class="item-link" title="">
                     <div class="bannerBox">
                         <img src="${pageContext.request.contextPath}/resources/images/man.jpg" class="item-img" title="" alt="" width="100%" height="100%">
                         <div class="item-html">

@@ -40,10 +40,10 @@
                                 <p>date</p><span>: ${cart.deliveryDate}</span>
                             </li>
                             <li>
-                                <p>total</p><span>: $ ${cart.total}</span>
+                                <p>total</p><span>: VND ${cart.total}</span>
                             </li>
                             <li>
-                                <p>mayment methord</p><span>: Credit card</span>
+                                <p>Payment method</p><span>: Credit card</span>
                             </li>
                             <li>
                                 <p>Order status</p><span>: ${cart.state}</span>
@@ -84,16 +84,16 @@
                             </tr>
                             </thead>
                             <tbody>
-                            <c:forEach var="item" items="cartList">
+                            <c:forEach var="item" items="${cartList}">
 
                             <tr>
-                                <th colspan="2"><span></span></th>
+                                <th colspan="2"><span>${item.productName}</span></th>
                                 <th>x ${item.quantity}</th>
                                 <th><span>VND ${item.price}</span></th>
                             </tr>
                             <tr>
                                 <th colspan="3">Subtotal</th>
-                                <th> <span>${item.quantity*item.price}</span></th>
+                                <th> <span>VND ${item.quantity*item.price}</span></th>
                             </tr>
                             </c:forEach>
                             </tbody>

@@ -30,8 +30,10 @@ public class CartController {
     public String cart(Model model, HttpSession session) {
         List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
         if (cartList != null) {
+            model.addAttribute("cartItemInfo", cartService.getCartFromSession(cartList));
             model.addAttribute("cartList", cartList);
             model.addAttribute("cartForm", new CartQuantityForm());
+            model.addAttribute("total", cartService.getTotalCost(cartList));
         }
         return "cart";
     }
@@ -41,7 +43,11 @@ public class CartController {
         List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
         cartList = cartService.updateQuantity(cartList, cartForm);
         session.setAttribute("cart", cartList);
-        session.setAttribute("cartSize", cartList.size());
+        if (cartList.size() == 0) {
+            session.removeAttribute("cartSize");
+        } else {
+            session.setAttribute("cartSize", cartList.size());
+        }
         return "redirect:/cart";
     }
 
@@ -63,14 +69,17 @@ public class CartController {
         session.setAttribute("cart", cartList);
         session.setAttribute("cartSize", cartList.size());
 
-        return "redirect:/";
+        return "redirect:/product";
     }
+
     @GetMapping("/order")
-    public String order(Model model,  HttpSession httpSession) {
+    public String order(Model model, HttpSession httpSession) {
         if (httpSession.getAttribute("email") == null) {
             return "redirect:/login";
         }
         model.addAttribute("cart", cartService.getOrderFromCustomerID((String) httpSession.getAttribute("id")));
         model.addAttribute("cartList", cartService.getCartListFromCustomerID((String) httpSession.getAttribute("id")));
+
+        return "order";
     }
 }

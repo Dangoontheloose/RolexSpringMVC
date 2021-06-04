@@ -70,6 +70,7 @@ public class CartService {
                 setPrice(product.getPrice());
                 setProductName(product.getProductName());
                 setQuantity(cartItem.getQuantity());
+                setImg(product.getImg());
             }};
 
             checkoutProductVMList.add(cvm);
@@ -100,20 +101,18 @@ public class CartService {
     }
 
     public void createOrder(String customerID, List<AddToCartForm> cartList) {
-        Cart cart = new Cart() {{
-            setCustomerID(customerID);
-            setState("Being delivered");
-            setDeliveryDate(LocalDate.now());
-        }};
+        Cart cart = new Cart();
+        cart.setCustomerID(customerID);
+        cart.setState("Being delivered");
+        cart.setDeliveryDate(LocalDate.now());
         cartRepository.insert(cart);
 
         for (AddToCartForm cartItem :
                 cartList) {
-            CartDetail cartDetail = new CartDetail(){{
-                setCartID(cart.getCartID());
-                setProductID(cartItem.getpID());
-                setQuantity(cartItem.getQuantity());
-            }};
+            CartDetail cartDetail = new CartDetail();
+            cartDetail.setCartID(cart.getCartID());
+            cartDetail.setProductID(cartItem.getpID());
+            cartDetail.setQuantity(cartItem.getQuantity());
             cartDetailRepository.insert(cartDetail);
         }
     }
@@ -122,7 +121,7 @@ public class CartService {
         Cart cart = cartRepository.findByCustomerID(customerID);
         Customer customer = customerRepository.findByCustomerID(customerID);
 
-        return new OrderVM(){{
+        return new OrderVM() {{
             setCartID(cart.getCartID());
             setState(cart.getState());
             setDeliveryDate(cart.getDeliveryDate());
@@ -138,9 +137,10 @@ public class CartService {
         List<CartDetail> cartDetails = cartDetailRepository.findAllByCartID(cart.getCartID());
         for (CartDetail item :
                 cartDetails) {
-            OrderCartDetailVM ovm = new OrderCartDetailVM(){{
+            OrderCartDetailVM ovm = new OrderCartDetailVM() {{
                 setPrice(productRepository.findFirstByProductID(item.getProductID()).getPrice());
                 setQuantity(item.getQuantity());
+                setProductName(productRepository.findFirstByProductID(item.getProductID()).getProductName());
             }};
             cartDetailVMS.add(ovm);
 

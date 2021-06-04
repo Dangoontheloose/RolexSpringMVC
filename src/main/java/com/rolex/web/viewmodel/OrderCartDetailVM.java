@@ -3,6 +3,7 @@ package com.rolex.web.viewmodel;
 public class OrderCartDetailVM {
     private int price;
     private int quantity;
+    private String productName;
 
     public int getQuantity() {
         return quantity;
@@ -18,5 +19,13 @@ public class OrderCartDetailVM {
 
     public void setPrice(int price) {
         this.price = price;
+    }
+
+    public String getProductName() {
+        return productName;
+    }
+
+    public void setProductName(String productName) {
+        this.productName = productName;
     }
 }

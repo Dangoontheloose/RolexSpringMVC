@@ -5,6 +5,7 @@ public class CheckoutProductVM {
     private String productName;
     private int price;
     private int quantity;
+    private String img;
 
     public String getProductName() {
         return productName;
@@ -36,5 +37,13 @@ public class CheckoutProductVM {
 
     public void setProductID(String productID) {
         this.productID = productID;
+    }
+
+    public String getImg() {
+        return img;
+    }
+
+    public void setImg(String img) {
+        this.img = img;
     }
 }
