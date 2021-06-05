@@ -59,7 +59,7 @@ public class CheckoutController {
         List<AddToCartForm> cartList = (List<AddToCartForm>) session.getAttribute("cart");
         cartService.createOrder((String) session.getAttribute("id"), cartList);
         session.removeAttribute("cart");
-
+        session.removeAttribute("cartSize");
         return "redirect:/order";
     }
 }
