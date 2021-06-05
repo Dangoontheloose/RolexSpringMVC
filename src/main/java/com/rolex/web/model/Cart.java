@@ -3,23 +3,31 @@ package com.rolex.web.model;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.util.ArrayList;
-import java.util.Date;
+import java.sql.Timestamp;
+import java.time.LocalDate;
+import java.util.UUID;
 
 @Document(collection = "Cart")
 public class Cart {
     @Id
     private String _id;
-    private int cartID;
+    private String cartID;
     private String customerID;
-    private Date deliveryDate;
+    private LocalDate deliveryDate;
     private String state;
 
-    public int getCartID() {
+    public Cart() {
+        Timestamp timestamp = new Timestamp(System.currentTimeMillis());
+        long time = timestamp.getTime();
+        UUID uuid = UUID.randomUUID();
+        cartID = String.format("%d%s", time, uuid.toString());
+    }
+
+    public String getCartID() {
         return cartID;
     }
 
-    public void setCartID(int cartID) {
+    public void setCartID(String cartID) {
         this.cartID = cartID;
     }
 
@@ -31,11 +39,11 @@ public class Cart {
         this.customerID = customerID;
     }
 
-    public Date getDeliveryDate() {
+    public LocalDate getDeliveryDate() {
         return deliveryDate;
     }
 
-    public void setDeliveryDate(Date deliveryDate) {
+    public void setDeliveryDate(LocalDate deliveryDate) {
         this.deliveryDate = deliveryDate;
     }
 

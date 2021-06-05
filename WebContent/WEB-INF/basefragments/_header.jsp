@@ -3,7 +3,7 @@
 <div class="banner">
     <div class="container">
         <div class="logo">
-            <h1><a style="text-decoration: none" href="#"><span class="m_1">R</span>olex</a></h1>
+            <h1><a style="text-decoration: none" href="${pageContext.request.contextPath}"><span class="m_1">R</span>olex</a></h1>
         </div>
         <div class="header_top">
             <div class="header_top_left">
@@ -11,7 +11,7 @@
                     <a href="${pageContext.request.contextPath}/cart">
                         <h4>
                             <p>Cart:(${(sessionScope.cartSize != null) ? sessionScope.cartSize : 0} items)</p>
-                            <img src="http://localhost:8080/rolex/resources/images/bag.png" alt=""/>
+                            <img src="${pageContext.request.contextPath}/resources/images/bag.png" alt=""/>
                             <div class="clearfix"></div>
                         </h4>
                     </a>
@@ -45,12 +45,12 @@
     <div class="header_bottom">
         <div class="menu">
             <ul class="megamenu skyblue">
-                <li><a class="color2" href="#">Mens</a>
+                <li><a class="color2" href="${pageContext.request.contextPath}/">Home</a>
                 </li>
-                <li><a class="color2" href="#">Womens</a>
+                <li><a class="color2" href="${pageContext.request.contextPath}/product">Men</a>
                 </li>
-                <li><a class="color10" href="#">Brands</a></li>
-                <li><a class="color7" href="#">News</a></li>
+                <li><a class="" href="${pageContext.request.contextPath}/product">Womens</a></li>
+                <li><a class="" href="${pageContext.request.contextPath}/about">About</a></li>
                 <div class="clearfix"></div>
             </ul>
         </div>

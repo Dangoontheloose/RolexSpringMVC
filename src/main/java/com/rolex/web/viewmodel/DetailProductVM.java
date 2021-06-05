@@ -1,6 +1,6 @@
 package com.rolex.web.viewmodel;
 
-public class ProductDetailViewModel {
+public class DetailProductVM {
     private String productID;
     private int price;
     private String description;

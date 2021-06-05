@@ -319,6 +319,9 @@ thead {
 .custom-file-label {
   border-radius: 0;
 }
+.table td {
+  text-overflow: ellipsis;
+}
 .table td,
 .table th {
   border-top: 1px solid #415a70;

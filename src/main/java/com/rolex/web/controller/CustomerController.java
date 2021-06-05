@@ -60,6 +60,7 @@ public class CustomerController {
             return "login";
         }
         session.setAttribute("email", loginForm.getEmail());
+        session.setAttribute("id", customerService.getCustomerIDByEmail(loginForm.getEmail()));
         return "login-success";
     }
 
