@@ -88,6 +88,7 @@
       <artifactId>webapp-runner</artifactId>
       <version>9.0.27.1</version>
       <scope>provided</scope>
+    </dependency>
     <dependency>
       <!--  Only bundled with java 1.6+ -->
       <groupId>javax.annotation</groupId>
