@@ -47,20 +47,20 @@
                             <li>
                                 <a href="${pageContext.request.contextPath}/product/${item.productID}"> ${item.productName}
                                     <span class="middle">x ${item.quantity}</span>
-                                    <span class="last">VND ${item.price}</span>
+                                    <span class="last item_price">${item.price}</span>
                                 </a>
                             </li>
                         </ul>
                         <ul class="list list_2">
                             <li>
-                                <a href="#">Subtotal
-                                    <span>VND ${item.quantity*item.price}</span>
+                                <a href="#">Subtotal: VND &nbsp;
+                                    <span class="item_price">${item.quantity*item.price}</span>
                                 </a>
                             </li>
                             </c:forEach>
                             <li>
-                                <a href="#">Total
-                                    <span>VND ${total}</span>
+                                <a href="#">Total: VND &nbsp;
+                                    <span class="item_price">${total}</span>
                                 </a>
                             </li>
                         </ul>

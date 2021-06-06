@@ -34,7 +34,7 @@ body {
 }
 .header_top_right {
     float: right;
-    width: 25%;
+    width: 30%;
 }
 .box {
     cursor: pointer;
@@ -1413,6 +1413,10 @@ li {
     font-weight: 700;
     text-transform: capitalize;
     margin-top: 100px;
+}
+.shopping_button {
+    float: left;
+    margin-right: 15px;
 }
 /* Checkout */
 .checkout_area p {

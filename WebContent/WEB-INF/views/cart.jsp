@@ -63,7 +63,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>VND ${item.price}</h5>
+                                                <h5 class="item_price">${item.price}</h5>
                                             </td>
                                             <td>
                                                 <div class="product_count">
@@ -74,7 +74,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>VND ${item.quantity*item.price}</h5>
+                                                <h5 class="item_price">${item.quantity*item.price}</h5>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -99,14 +99,16 @@
                                         <h5>Subtotal</h5>
                                     </td>
                                     <td>
-                                        <h5>VND ${total}</h5>
+                                        <h5 class="item_price">${total}</h5>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
                             <div class="checkout_btn_inner account-top">
-                                <a class="btn_1" href="${pageContext.request.contextPath}/product">Continue
+                                <div class="shopping_button">
+                                    <a class="btn_1" href="${pageContext.request.contextPath}/product">Continue
                                     Shopping</a>
+                                </div>
                                 <form:form action="${pageContext.request.contextPath}/move-to-checkout" method="post">
                                     <input class="btn_1" type="submit" value="Checkout">
                                 </form:form>

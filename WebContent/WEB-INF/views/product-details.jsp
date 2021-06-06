@@ -21,7 +21,7 @@
                     <h1>${product.productName}</h1>
                     <p class="availability">Availability: <span class="color">In stock</span></p>
                     <div class="price_single">
-                        <span class="">${product.price} VND</span>
+                        <span class="item_price">${product.price}</span>
                     </div>
                     <h2 class="quick">Quick Overview:</h2>
                     <p class="quick_desc">${product.description}</p>
