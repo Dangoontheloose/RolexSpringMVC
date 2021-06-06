@@ -6,17 +6,6 @@
             <h1><a style="text-decoration: none" href="${pageContext.request.contextPath}"><span class="m_1">R</span>olex</a></h1>
         </div>
         <div class="header_top">
-            <div class="header_top_left">
-                <div class="box">
-                    <a href="${pageContext.request.contextPath}/cart">
-                        <h4>
-                            <p>Cart:(${(sessionScope.cartSize != null) ? sessionScope.cartSize : 0} items)</p>
-                            <img src="${pageContext.request.contextPath}/resources/images/bag.png" alt=""/>
-                            <div class="clearfix"></div>
-                        </h4>
-                    </a>
-                </div>
-            </div>
             <div class="header_top_right">
                 <ul class="header_user_info">
                     <c:if test="${sessionScope.email == null}">
@@ -30,12 +19,14 @@
                 </ul>
             </div>
             <div class="search-box">
-                <div>
-                    <form>
-                        <input class="sb-search-input" placeholder="Find watch" type="search" name="search" id="search">
-                        <input class="sb-search-submit" type="submit" value="">
-                        <span class="sb-icon-search"></span>
-                    </form>
+                <div class="box sb-search-input">
+                    <a href="${pageContext.request.contextPath}/cart">
+                        <h4>
+                            <p>Cart:(${(sessionScope.cartSize != null) ? sessionScope.cartSize : 0} items)</p>
+                            <img src="${pageContext.request.contextPath}/resources/images/bag.png" alt=""/>
+                            <div class="clearfix"></div>
+                        </h4>
+                    </a>
                 </div>
             </div>
             <div class="clearfix"></div>

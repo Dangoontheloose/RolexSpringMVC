@@ -17,7 +17,7 @@
                         <form:errors path="password"/>
                     </div>
                     <input type="submit" value="Login">
-                    <a href="${pageContext.request.contextPath}/register">Register</a>
+                    <a class="btn_1" href="${pageContext.request.contextPath}/register">Register</a>
                 </form:form>
             </div>
             <div class="clearfix"></div>

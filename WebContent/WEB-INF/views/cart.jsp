@@ -69,10 +69,8 @@
                                                 <div class="product_count">
                                                     <form:hidden path="cartList[${status.index}].pID"
                                                                  value="${item.productID}"/>
-                                                    <span class="input-number-decrement">-</span>
                                                     <form:input path="cartList[${status.index}].quantity"
                                                                 value="${item.quantity}"/>
-                                                    <span class="input-number-increment">+</span>
                                                 </div>
                                             </td>
                                             <td>
@@ -83,9 +81,12 @@
 
                                     <tr class="bottom_button">
                                         <td>
-                                            <input class="btn btn-primary" type="submit" value="Update cart">
+                                            <div class="account-top">
+                                                <input class="btn btn-primary" type="submit" value="Update cart">
+                                            </div>
                                         </td>
 
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
@@ -103,8 +104,8 @@
                                 </tr>
                                 </tbody>
                             </table>
-                            <div class="checkout_btn_inner float-right">
-                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/product">Continue
+                            <div class="checkout_btn_inner account-top">
+                                <a class="btn_1" href="${pageContext.request.contextPath}/product">Continue
                                     Shopping</a>
                                 <form:form action="${pageContext.request.contextPath}/move-to-checkout" method="post">
                                     <input class="btn_1" type="submit" value="Checkout">
