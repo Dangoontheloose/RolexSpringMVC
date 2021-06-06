@@ -34,7 +34,7 @@
                         <div class="col-md-12 form-group p_star">
                             <form:input type="text" class="form-control" id="add1" name="address" path="address"/>
                         </div>
-                        <div class="register-button">
+                        <div class="account-top">
                             <input class="btn btn-primary" type="submit" value="Update Personal Info">
                         </div>
                     </form:form>

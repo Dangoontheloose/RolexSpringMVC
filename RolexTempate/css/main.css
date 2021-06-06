@@ -22,7 +22,7 @@ body {
 }
 /* Header */
 .banner {
-  background: url(https://static.fratello.com/2019/04/Rolex-Submariner-2.jpg)
+  background: url(https://i.pinimg.com/originals/ee/9a/b6/ee9ab6f2b7a2cff64b1ee4b8de21aa27.jpg)
     no-repeat center center;
   background-size: cover;
   min-height: 500px;
@@ -58,6 +58,7 @@ body {
   float: left;
   margin: 6px 0 0 0;
   color: #000;
+  font-size: 12px;
 }
 ul.header_user_info {
   float: left;
@@ -112,7 +113,6 @@ ul.header_user_info li.user_desc {
   right: 20px;
   border: none;
   outline: none;
-  background: #555;
   width: 115px;
   height: 28px;
   margin: 0;
