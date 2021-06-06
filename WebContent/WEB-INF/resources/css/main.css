@@ -1414,6 +1414,10 @@ li {
     text-transform: capitalize;
     margin-top: 100px;
 }
+.shopping_button {
+    float: left;
+    margin-right: 15px;
+}
 /* Checkout */
 .checkout_area p {
     font-size: 14px;

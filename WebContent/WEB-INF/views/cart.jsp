@@ -105,8 +105,10 @@
                                 </tbody>
                             </table>
                             <div class="checkout_btn_inner account-top">
-                                <a class="btn_1" href="${pageContext.request.contextPath}/product">Continue
+                                <div class="shopping_button">
+                                    <a class="btn_1" href="${pageContext.request.contextPath}/product">Continue
                                     Shopping</a>
+                                </div>
                                 <form:form action="${pageContext.request.contextPath}/move-to-checkout" method="post">
                                     <input class="btn_1" type="submit" value="Checkout">
                                 </form:form>
