@@ -63,7 +63,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>VND ${item.price}</h5>
+                                                <h5 class="item_price">${item.price}</h5>
                                             </td>
                                             <td>
                                                 <div class="product_count">
@@ -74,7 +74,7 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>VND ${item.quantity*item.price}</h5>
+                                                <h5 class="item_price">${item.quantity*item.price}</h5>
                                             </td>
                                         </tr>
                                     </c:forEach>
@@ -99,7 +99,7 @@
                                         <h5>Subtotal</h5>
                                     </td>
                                     <td>
-                                        <h5>VND ${total}</h5>
+                                        <h5 class="item_price">${total}</h5>
                                     </td>
                                 </tr>
                                 </tbody>
