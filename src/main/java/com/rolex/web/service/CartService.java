@@ -12,10 +12,8 @@ import com.rolex.web.viewmodel.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.time.DateTimeException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Service
@@ -29,6 +27,24 @@ public class CartService {
     @Autowired
     CustomerRepository customerRepository;
 
+
+    public List<AdminOrderVM> getOrderList() {
+        List<Cart> orderList = cartRepository.findAll();
+        List<AdminOrderVM> orderVMList = new ArrayList<>();
+        for (Cart item :
+                orderList) {
+            AdminOrderVM avm = new AdminOrderVM() {{
+                setCartID(item.getCartID());
+                setState(item.getState());
+                setDeliveryDate(item.getDeliveryDate());
+                setAddress(customerRepository.findByCustomerID(item.getCustomerID()).getAddress());
+                setEmail(customerRepository.findByCustomerID(item.getCustomerID()).getEmail());
+                setPrice(getTotalCost(item.getCartID()));
+            }};
+            orderVMList.add(avm);
+        }
+        return orderVMList;
+    }
 
     public List<AddToCartForm> addToTempCart(List<AddToCartForm> cartList, AddToCartForm addToCartForm) {
         for (AddToCartForm form :

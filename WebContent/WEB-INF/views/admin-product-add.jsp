@@ -16,32 +16,69 @@
 <body>
 <div class="account-in">
     <div class="container">
-        <form:form action="${pageContext.request.contextPath}/admin/product/add-product-submit" method="post" modelAttribute="productForm">
+        <form:form action="${pageContext.request.contextPath}/admin/product/add-product-submit" method="post"
+                   modelAttribute="productForm">
             <div class="register-top-grid">
                 <h2>PRODUCT INFO</h2>
                 <div>
                     <span>Product ID<label>*</label></span>
-                    <form:input type="text" path="productID"/>
+                    <c:choose>
+                        <c:when test="${product != null}">
+                            <form:hidden path="productID" value="${product.productID}"/>
+                            <input type="text" value="${product.productID}" disabled="disabled">
+                        </c:when>
+                        <c:otherwise>
+                            <form:input type="text" path="productID"/>
+                        </c:otherwise>
+                    </c:choose>
                     <form:errors path="productID" cssClass="error"/>
                 </div>
                 <div>
                     <span>Price<label>*</label></span>
-                    <form:input type="text" path="price"/>
+                    <c:choose>
+                        <c:when test="${product != null}">
+                            <form:input type="text" path="price" value="${product.price}"/>
+                        </c:when>
+                        <c:otherwise>
+                            <form:input type="text" path="price"/>
+                        </c:otherwise>
+                    </c:choose>
                     <form:errors path="price" cssClass="error"/>
                 </div>
                 <div>
                     <span>Description<label>*</label></span>
-                    <form:input type="text" path="description"/>
+                    <c:choose>
+                        <c:when test="${product != null}">
+                            <form:input type="text" path="description" value="${product.description}"/>
+                        </c:when>
+                        <c:otherwise>
+                            <form:input type="text" path="description"/>
+                        </c:otherwise>
+                    </c:choose>
                     <form:errors path="description" cssClass="error"/>
                 </div>
                 <div>
                     <span>Stock<label>*</label></span>
-                    <form:input type="text" path="stock"/>
+                    <c:choose>
+                        <c:when test="${product != null}">
+                            <form:input type="text" path="stock" value="${product.stock}"/>
+                        </c:when>
+                        <c:otherwise>
+                            <form:input type="text" path="stock"/>
+                        </c:otherwise>
+                    </c:choose>
                     <form:errors path="stock" cssClass="error"/>
                 </div>
                 <div>
                     <span>Image<label>*</label></span>
-                    <form:input type="text" path="img"/>
+                    <c:choose>
+                        <c:when test="${product != null}">
+                            <form:input type="text" path="img" value="${product.img}"/>
+                        </c:when>
+                        <c:otherwise>
+                            <form:input type="text" path="img"/>
+                        </c:otherwise>
+                    </c:choose>
                     <form:errors path="img" cssClass="error"/>
                 </div>
                 <div>
@@ -71,6 +108,15 @@
                     </form:select>
                     <form:errors path="watchTypeValue" cssClass="error"/>
                 </div>
+                <div>
+                    <span>Material<label>*</label></span>
+                    <form:select type="text" path="materialName">
+                        <c:forEach var="item" items="${materialList}">
+                            <form:option value="${item.materialName}">${item.materialName}</form:option>
+                        </c:forEach>
+                    </form:select>
+                    <form:errors path="materialName" cssClass="error"/>
+                </div>
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
@@ -79,6 +125,17 @@
                 <div class="clearfix"></div>
             </div>
         </form:form>
+        <c:choose>
+        <c:when test="${product != null}">
+        <div class="register-button">
+            <form:form action="${pageContext.request.contextPath}/admin/product/delete-product-submit/${product.productID}"
+                       method="post">
+                <input type="submit" value="Delete"/>
+                <div class="clearfix"></div>
+            </form:form>
+            </c:when>
+            </c:choose>
+        </div>
     </div>
 </div>
 </body>

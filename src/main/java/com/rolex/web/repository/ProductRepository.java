@@ -12,7 +12,7 @@ import java.util.List;
 @Repository
 public interface ProductRepository extends MongoRepository<Product, String> {
     List<Product> findByCollectionID(int collectionID);
-
+    void deleteByProductID(String productID);
     Product findFirstByProductID(String productID);
     Product findFirstByCollectionID(int collectionID);
 }
