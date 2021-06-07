@@ -63,29 +63,30 @@
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>VND ${item.price}</h5>
+                                                <h5 class="item_price">${item.price}</h5>
                                             </td>
                                             <td>
                                                 <div class="product_count">
                                                     <form:hidden path="cartList[${status.index}].pID"
                                                                  value="${item.productID}"/>
-                                                    <span class="input-number-decrement">-</span>
                                                     <form:input path="cartList[${status.index}].quantity"
                                                                 value="${item.quantity}"/>
-                                                    <span class="input-number-increment">+</span>
                                                 </div>
                                             </td>
                                             <td>
-                                                <h5>VND ${item.quantity*item.price}</h5>
+                                                <h5 class="item_price">${item.quantity*item.price}</h5>
                                             </td>
                                         </tr>
                                     </c:forEach>
 
                                     <tr class="bottom_button">
                                         <td>
-                                            <input class="btn btn-primary" type="submit" value="Update cart">
+                                            <div class="account-top">
+                                                <input class="btn btn-primary" type="submit" value="Update cart">
+                                            </div>
                                         </td>
 
+                                        <td></td>
                                         <td></td>
                                         <td></td>
                                     </tr>
@@ -98,14 +99,16 @@
                                         <h5>Subtotal</h5>
                                     </td>
                                     <td>
-                                        <h5>VND ${total}</h5>
+                                        <h5 class="item_price">${total}</h5>
                                     </td>
                                 </tr>
                                 </tbody>
                             </table>
-                            <div class="checkout_btn_inner float-right">
-                                <a class="btn btn-primary" href="${pageContext.request.contextPath}/product">Continue
+                            <div class="checkout_btn_inner account-top">
+                                <div class="shopping_button">
+                                    <a class="btn_1" href="${pageContext.request.contextPath}/product">Continue
                                     Shopping</a>
+                                </div>
                                 <form:form action="${pageContext.request.contextPath}/move-to-checkout" method="post">
                                     <input class="btn_1" type="submit" value="Checkout">
                                 </form:form>

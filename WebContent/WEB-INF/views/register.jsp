@@ -52,7 +52,7 @@
                 <div class="clearfix"></div>
             </div>
             <div class="clearfix"></div>
-            <div class="register-button">
+            <div class="account-top">
                 <input type="submit" value="Submit"/>
                 <div class="clearfix"></div>
             </div>
