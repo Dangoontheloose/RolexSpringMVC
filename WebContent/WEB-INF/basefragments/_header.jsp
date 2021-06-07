@@ -40,7 +40,7 @@
                 </li>
                 <li><a class="color2" href="${pageContext.request.contextPath}/product">Men</a>
                 </li>
-                <li><a class="" href="${pageContext.request.contextPath}/product">Womens</a></li>
+                <li><a class="" href="${pageContext.request.contextPath}/product">Women</a></li>
                 <li><a class="" href="${pageContext.request.contextPath}/about">About</a></li>
                 <div class="clearfix"></div>
             </ul>
