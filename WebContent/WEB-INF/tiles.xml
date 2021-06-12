@@ -51,6 +51,10 @@
     <definition name="admin-dashboard" extends="base.admin">
         <put-attribute name="body" value="/WEB-INF/views/admin-dashboard.jsp"/>
     </definition>
+<!--    Admin Login-->
+<definition name="admin-login" extends="base.admin">
+<put-attribute name="body" value="/WEB-INF/views/admin-login.jsp"/>
+</definition>
 <!--    Admin Product List Page-->
     <definition name="admin-product-list" extends="base.admin">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>

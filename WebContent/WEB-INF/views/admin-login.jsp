@@ -1,16 +1,25 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: dango
-  Date: 07/06/2021
-  Time: 15:58
-  To change this template use File | Settings | File Templates.
---%>
+<%@ taglib prefix="form" uri="http://www.springframework.org/tags/form" %>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
-<html>
-<head>
-    <title>Title</title>
-</head>
-<body>
-
-</body>
-</html>
+<div class="account-in">
+    <div class="container">
+        <h3>Account</h3>
+        <div class="row">
+            <div class="col-md-7 account-top">
+                <form:form action="${pageContext.request.contextPath}/admin/login-submit" modelAttribute="loginForm">
+                    <div>
+                        <span>Email*</span>
+                        <form:input type="text" path="email"/>
+                        <form:errors path="email"/>
+                    </div>
+                    <div>
+                        <span class="pass">Password*</span>
+                        <form:password path="password"/>
+                        <form:errors path="password"/>
+                    </div>
+                    <input type="submit" value="Login">
+                </form:form>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+    </div>
+</div>

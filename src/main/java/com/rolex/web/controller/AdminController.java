@@ -12,6 +12,7 @@ import org.springframework.ui.Model;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.*;
 
+import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
 @Controller
@@ -46,10 +47,14 @@ public class AdminController {
         return "admin-login";
     };
 
-//    @PostMapping("/login-submit")
-//    public String adminLoginSubmit(LoginForm loginForm) {
-//
-//    }
+    @PostMapping("/login-submit")
+    public String adminLoginSubmit(LoginForm loginForm, HttpSession session) {
+        if(customerService.adminValidate(loginForm)) {
+            session.setAttribute("admin", true);
+            return "redirect:/admin/";
+        }
+        return "admin-login";
+    }
 
     @GetMapping("/")
     public String adminDashboard(Model model) {
