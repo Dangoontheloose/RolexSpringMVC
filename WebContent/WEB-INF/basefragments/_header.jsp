@@ -17,7 +17,8 @@
                         </a>
                     </c:if>
                     <c:if test="${sessionScope.email != null}">
-                        <li class="user_desc"><a href="${pageContext.request.contextPath}/profile">${sessionScope.email}</a></li>
+                        <li class="user_desc"><a
+                                href="${pageContext.request.contextPath}/profile">${sessionScope.email}</a></li>
                         <div class="clearfix"></div>
                     </c:if>
                     <c:if test="${sessionScope.email != null}">
@@ -51,9 +52,8 @@
             <ul class="megamenu skyblue">
                 <li><a class="color2" href="${pageContext.request.contextPath}/">Home</a>
                 </li>
-                <li><a class="color2" href="${pageContext.request.contextPath}/product">Men</a>
+                <li><a class="color2" href="${pageContext.request.contextPath}/product">Shop Now</a>
                 </li>
-                <li><a class="" href="${pageContext.request.contextPath}/product">Women</a></li>
                 <li><a class="" href="${pageContext.request.contextPath}/about">About</a></li>
                 <div class="clearfix"></div>
             </ul>

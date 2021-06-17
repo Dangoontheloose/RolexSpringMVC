@@ -50,7 +50,10 @@ public class CustomerController {
         customerService.registerCustomer(registerViewModel);
         return "register-success";
     }
-
+    @GetMapping("/profile")
+    public String profile(Model model) {
+        return "profile";
+    }
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("loginForm", new LoginForm());

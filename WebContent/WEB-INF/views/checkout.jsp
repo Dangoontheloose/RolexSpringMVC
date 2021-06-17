@@ -79,10 +79,9 @@
                                     data-key=${stripePublicKey}
                                     data-amount=${total/100}
                                     data-currency=${currency}
-                                    data-name='Baeldung'
-                                    data-description='Spring course checkout'
-                                    data-image
-                                            ='https://www.baeldung.com/wp-content/themes/baeldung/favicon/android-chrome-192x192.png'
+                                    data-name='ROLEX'
+                                    data-description='Product Checkout'
+                                    data-image=""
                                     data-locale='auto'
                                     data-zip-code='false'>
                             </script>

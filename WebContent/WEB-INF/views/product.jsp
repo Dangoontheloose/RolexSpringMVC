@@ -14,7 +14,7 @@
                                 <div class="product-bottom">
                                     <h3>${item.productName}</h3>
                                     <p>${item.collectionName}</p>
-                                    <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">${item.price}</span></h4>
+                                    <h4><a class="item_add" href="#"><i></i></a> <span class=" item_price">${item.price}</span> VND</h4>
                                 </div>
                             </div>
                         </div>

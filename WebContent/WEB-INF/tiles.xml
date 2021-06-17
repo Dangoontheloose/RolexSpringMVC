@@ -46,8 +46,11 @@
     <!--    Cart Page-->
     <definition name="cart" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/cart.jsp"/>
-<!--        Admin dashboard-->
     </definition>
+    <definition name="profile" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/profile.jsp"/>
+    </definition>
+<!--        Admin dashboard-->
     <definition name="admin-dashboard" extends="base.admin">
         <put-attribute name="body" value="/WEB-INF/views/admin-dashboard.jsp"/>
     </definition>
