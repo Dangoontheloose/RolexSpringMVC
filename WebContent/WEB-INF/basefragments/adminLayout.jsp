@@ -5,14 +5,13 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rolex</title>
+    <title>Document</title>
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/main.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/bootstrap.css">
     <link rel="stylesheet" href="${pageContext.request.contextPath}/resources/css/admin.css">
 </head>
 <body>
-    <tiles:insertAttribute name="header" />
-    <tiles:insertAttribute name="body" />
-    <tiles:insertAttribute name="footer" />
+<tiles:insertAttribute name="header" />
+<tiles:insertAttribute name="body" />
 </body>
 </html>

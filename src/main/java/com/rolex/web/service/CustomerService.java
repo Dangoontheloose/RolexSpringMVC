@@ -3,6 +3,7 @@ package com.rolex.web.service;
 import com.rolex.web.model.Customer;
 import com.rolex.web.repository.CustomerRepository;
 import com.rolex.web.viewmodel.CustomerProfileEditVM;
+import com.rolex.web.viewmodel.LoginForm;
 import com.rolex.web.viewmodel.RegisterViewModel;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -30,6 +31,22 @@ public class CustomerService {
             setEmail(customer.getEmail());
             setPhoneNum(customer.getPhoneNum());
         }};
+    }
+    public void updateCustomer(CustomerProfileEditVM customerProfileEditVM) {
+        Customer customer = customerRepository.findByCustomerID(customerProfileEditVM.getCustomerID());
+        if (customer != null) {
+            customer.setAddress(customerProfileEditVM.getAddress());
+            customer.setEmail(customerProfileEditVM.getEmail());
+            customer.setPhoneNum(customerProfileEditVM.getPhoneNum());
+            customer.setName(customerProfileEditVM.getName());
+
+            customerRepository.save(customer);
+        }
+    }
+
+    public boolean adminValidate(LoginForm loginForm) {
+        Customer admin = customerRepository.findByEmail(loginForm.getEmail());
+        return admin != null && admin.getPassword().equals(loginForm.getPassword()) && admin.getAccountTypeID() == 1;
     }
 
     public String getCustomerIDByEmail(String email) {

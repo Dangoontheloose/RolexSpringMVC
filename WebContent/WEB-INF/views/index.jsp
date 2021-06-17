@@ -11,25 +11,13 @@
 <div class="main">
     <div class="container">
         <ul class="row content-home">
-            <li class="col-5">
-                <a href="" class="item-link" title="">
+            <li class="col-10">
+                <a href="${pageContext.request.contextPath}/product" class="item-link" title="">
                     <div class="bannerBox">
                         <img src="${pageContext.request.contextPath}/resources/images/man.jpg" class="item-img" title="" alt="" width="100%" height="100%">
                         <div class="item-html">
-                            <h3><span>Men</span></h3>
+                            <h3><span>Men & Women</span></h3>
                             <p>The ultimate watch of prestige</p>
-                            <button>Shop now!</button>
-                        </div>
-                    </div>
-                </a>
-            </li>
-            <li class="col-5">
-                <a href="#" class="item-link" title="">
-                    <div class="bannerBox">
-                        <img src="${pageContext.request.contextPath}/resources/images/ladies.jpg" class="item-img" title="" alt="" width="100%" height="100%">
-                        <div class="item-html">
-                            <h3><span>Ladies</span></h3>
-                            <p>The pearl in the Oyster collection</p>
                             <button>Shop now!</button>
                         </div>
                     </div>

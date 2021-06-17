@@ -14,6 +14,11 @@
                 template="/WEB-INF/basefragments/redirectLayout.jsp">
         <put-attribute name="body" value="" />
     </definition>
+    <definition name="base.admin"
+                template="/WEB-INF/basefragments/adminLayout.jsp">
+        <put-attribute name="header" value="/WEB-INF/basefragments/admin-header.jsp" />
+        <put-attribute name="body" value="" />
+    </definition>
 <!--    Home Page-->
     <definition name="home" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/index.jsp"/>
@@ -42,16 +47,27 @@
     <definition name="cart" extends="base.definition">
         <put-attribute name="body" value="/WEB-INF/views/cart.jsp"/>
     </definition>
+    <definition name="profile" extends="base.definition">
+        <put-attribute name="body" value="/WEB-INF/views/profile.jsp"/>
+    </definition>
+<!--        Admin dashboard-->
+    <definition name="admin-dashboard" extends="base.admin">
+        <put-attribute name="body" value="/WEB-INF/views/admin-dashboard.jsp"/>
+    </definition>
+<!--    Admin Login-->
+<definition name="admin-login" extends="base.admin">
+<put-attribute name="body" value="/WEB-INF/views/admin-login.jsp"/>
+</definition>
 <!--    Admin Product List Page-->
-    <definition name="admin-product-list" extends="base.definition">
+    <definition name="admin-product-list" extends="base.admin">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-list.jsp"/>
     </definition>
 <!--    Admin Product Add Page -->
-    <definition name="admin-product-add" extends="base.definition">
+    <definition name="admin-product-add" extends="base.admin">
         <put-attribute name="body" value="/WEB-INF/views/admin-product-add.jsp"/>
     </definition>
 <!-- Admin Product Collection Add Page -->
-    <definition name="admin-collection-add" extends="base.definition">
+    <definition name="admin-collection-add" extends="base.admin">
         <put-attribute name="body" value="/WEB-INF/views/admin-collection-add.jsp"/>
     </definition>
 <!--    Product Detail Page-->

@@ -2,8 +2,10 @@ package com.rolex.web.controller;
 
 
 import com.rolex.web.service.CustomerService;
+import com.rolex.web.viewmodel.CustomerProfileEditVM;
 import com.rolex.web.viewmodel.LoginForm;
 import com.rolex.web.viewmodel.RegisterViewModel;
+import com.sun.net.httpserver.HttpPrincipal;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -27,10 +29,11 @@ public class CustomerController {
         return new RegisterViewModel();
     }
 
-    @GetMapping("/customers")
-    public String customer(Model model) {
-        model.addAttribute("customerList", customerService.getCustomerList());
-        return "customer-list";
+    @PostMapping("/profile/update-from-checkout")
+    public String updateProfile(CustomerProfileEditVM customerProfileEditVM) {
+        customerService.updateCustomer(customerProfileEditVM);
+
+        return "redirect:/checkout";
     }
 
     @GetMapping("/register")
@@ -47,11 +50,25 @@ public class CustomerController {
         customerService.registerCustomer(registerViewModel);
         return "register-success";
     }
+    @GetMapping("/profile")
+    public String profile(Model model) {
+        return "profile";
+    }
     @GetMapping("/login")
     public String login(Model model) {
         model.addAttribute("loginForm", new LoginForm());
 
         return "login";
+    }
+
+    @PostMapping("/logout")
+    public String logout(HttpSession session) {
+        if (session.getAttribute("email") != null) {
+            session.removeAttribute("email");
+            session.removeAttribute("id");
+        }
+
+        return "redirect:/login";
     }
 
     @PostMapping("/login-submit")

@@ -76,7 +76,10 @@ public class ProductService {
     }
 
     public void addProduct(AdminProductVM productViewModel) {
-        Product product = new Product();
+        Product product = productRepository.findFirstByProductID(productViewModel.getProductID());
+        if (product == null) {
+            product = new Product();
+        }
         product.setProductID(productViewModel.getProductID());
         product.setDescription(productViewModel.getDescription());
         product.setPrice(productViewModel.getPrice());
@@ -88,12 +91,12 @@ public class ProductService {
         product.setSizeID(watchSizeRepository.findBySizeValue(productViewModel.getSizeValue()).getSizeID());
         product.setWatchTypeID(
                 watchTypeRepository.findByWatchTypeValue(productViewModel.getWatchTypeValue()).getWatchTypeID());
-
-        productRepository.insert(product);
+        product.setMaterialID(materialRepository.findByMaterialName(productViewModel.getMaterialName()).getMaterialID());
+        productRepository.save(product);
     }
 
-    public void deleteProduct(Product product) {
-        productRepository.delete(product);
+    public void deleteProductByProductID(String productID) {
+        productRepository.deleteByProductID(productID);
     }
 
     public void updateProduct(Product product) {
@@ -125,7 +128,7 @@ public class ProductService {
             pvm.setPrice(item.getPrice());
             pvm.setStock(item.getStock());
             pvm.setImg(item.getImg());
-            pvm.setMaterialValue(materialRepository.findByMaterialID(item.getMaterialID()).getMaterialName());
+            pvm.setMaterialName(materialRepository.findByMaterialID(item.getMaterialID()).getMaterialName());
 
             pvm.setSizeValue(watchSizeRepository.findBySizeID(item.getSizeID()).getSizeValue());
             pvm.setWatchTypeValue(watchTypeRepository.findByWatchTypeID(item.getWatchTypeID()).getWatchTypeValue());
@@ -136,7 +139,9 @@ public class ProductService {
 
         return pvmList;
     }
-
+    public Product getProductFromID(String productID) {
+        return productRepository.findFirstByProductID(productID);
+    }
     public AdminProductVM getProductVMFromID(String productID) {
         Product product = productRepository.findFirstByProductID(productID);
         AdminProductVM pvm = new AdminProductVM();
@@ -148,7 +153,7 @@ public class ProductService {
         pvm.setPrice(product.getPrice());
         pvm.setStock(product.getStock());
         pvm.setImg(product.getImg());
-        pvm.setMaterialValue(materialRepository.findByMaterialID(product.getMaterialID()).getMaterialName());
+        pvm.setMaterialName(materialRepository.findByMaterialID(product.getMaterialID()).getMaterialName());
 
         pvm.setSizeValue(watchSizeRepository.findBySizeID(product.getSizeID()).getSizeValue());
         pvm.setWatchTypeValue(watchTypeRepository.findByWatchTypeID(product.getWatchTypeID()).getWatchTypeValue());

@@ -8,7 +8,7 @@ public class AdminProductVM {
     private int price;
     private int stock;
     private int sizeValue;
-    private String materialValue;
+    private String materialName;
     private String watchTypeValue;
     private String img;
     private String[] imgDetails;
@@ -78,12 +78,12 @@ public class AdminProductVM {
         this.watchTypeValue = watchTypeValue;
     }
 
-    public String getMaterialValue() {
-        return materialValue;
+    public String getMaterialName() {
+        return materialName;
     }
 
-    public void setMaterialValue(String materialValue) {
-        this.materialValue = materialValue;
+    public void setMaterialName(String materialName) {
+        this.materialName = materialName;
     }
 
     public String[] getImgDetails() {

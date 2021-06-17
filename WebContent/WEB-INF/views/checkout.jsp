@@ -19,7 +19,7 @@
             <div class="row">
                 <div class="col-lg-8">
                     <h3>Billing Details</h3>
-                    <form:form class="row contact_form" action="${pageContext.request.contextPath}/profile/update"
+                    <form:form class="row contact_form" action="${pageContext.request.contextPath}/profile/update-from-checkout"
                                method="post" modelAttribute="personalInfo" novalidate="novalidate">
                         <form:hidden path="customerID" value="${customerID}"/>
                         <div class="col-md-12 form-group p_star">
@@ -79,10 +79,9 @@
                                     data-key=${stripePublicKey}
                                     data-amount=${total/100}
                                     data-currency=${currency}
-                                    data-name='Baeldung'
-                                    data-description='Spring course checkout'
-                                    data-image
-                                            ='https://www.baeldung.com/wp-content/themes/baeldung/favicon/android-chrome-192x192.png'
+                                    data-name='ROLEX'
+                                    data-description='Product Checkout'
+                                    data-image=""
                                     data-locale='auto'
                                     data-zip-code='false'>
                             </script>

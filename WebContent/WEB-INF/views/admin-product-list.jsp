@@ -23,6 +23,7 @@
                     <table class="table table-hover tm-table-small tm-product-table">
                         <thead>
                         <tr>
+                            <th></th>
                             <th>Product ID</th>
                             <th>Collection</th>
                             <th>Description</th>
@@ -37,19 +38,20 @@
                         <tbody>
                         <c:forEach var="item" items="${productList}">
                             <tr>
-                            <td>${item.productID}</td>
-                            <td>${item.collectionName}</td>
-                            <td>${item.description}</td>
-                            <td>${item.price}</td>
-                            <td>${item.stock}</td>
-                            <td>${item.sizeValue}</td>
-                            <td>${item.materialValue}</td>
-                            <td>${item.watchTypeValue}</td>
-                            <td>${item.img}</td>
-<%--                            <td>--%>
-<%--                            <c:forEach var="imgDetails" items="${item.imgDetails}">--%>
-<%--                            <tr><td>${imgDetails}</td></tr>--%>
-<%--                        </c:forEach></td>--%>
+                                <td><a href="${pageContext.request.contextPath}/admin/product/${item.productID}"><button>Edit</button></a></td>
+                                <td>${item.productID}</td>
+                                <td>${item.collectionName}</td>
+                                <td>${item.description}</td>
+                                <td>${item.price}</td>
+                                <td>${item.stock}</td>
+                                <td>${item.sizeValue}</td>
+                                <td>${item.materialName}</td>
+                                <td>${item.watchTypeValue}</td>
+                                <td>${item.img}</td>
+                                    <%--                            <td>--%>
+                                    <%--                            <c:forEach var="imgDetails" items="${item.imgDetails}">--%>
+                                    <%--                            <tr><td>${imgDetails}</td></tr>--%>
+                                    <%--                        </c:forEach></td>--%>
                             </tr>
                         </c:forEach>
                         </tbody>
@@ -86,7 +88,8 @@
                                 <td>${item.collectionID}</td>
                                 <td>${item.collectionName}</td>
                                 <td>
-                                    <form:form action="product/delete-collection-submit/${item.collectionID}" method="post"
+                                    <form:form action="product/delete-collection-submit/${item.collectionID}"
+                                               method="post"
                                                modelAttribute="collectionForm">
                                         <form:hidden path="collID" value="${item.collectionID}"/>
                                         <input type="submit" value="Delete">
@@ -149,7 +152,8 @@
                                 <td>${item.sizeID}</td>
                                 <td>${item.sizeValue}</td>
                                 <td>
-                                    <form:form action="product/delete-size-submit/${item.sizeID}" method="post" modelAttribute="sizeForm">
+                                    <form:form action="product/delete-size-submit/${item.sizeID}" method="post"
+                                               modelAttribute="sizeForm">
                                         <form:hidden path="sID" value="${item.sizeID}"/>
                                         <input type="submit" value="Delete">
                                         <form:errors path="sID" cssClass="error"/>
@@ -254,7 +258,7 @@
 <%--Material List--%>
 <div class="">
     <div class="row tm-content-row">
-        <div class="col-sm-12 col-md-12 col-lg-12 col-xl-12 tm-block-col">
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6 tm-block-col">
             <div class="tm-bg-primary-light tm-block tm-block-products">
                 <div class="tm-product-table-container">
                     <table class="table table-hover tm-table-small tm-product-table">
@@ -264,25 +268,49 @@
                             <th>Material Value</th>
                         </tr>
                         </thead>
-<tbody>
+                        <tbody>
                         <c:forEach var="item" items="${materialList}">
                             <tr>
                                 <td>${item.materialID}</td>
                                 <td>${item.materialName}</td>
-                                    <%--            <td>--%>
-                                    <%--                <form:form action="product/delete-type-submit/${item.watchTypeID}" method="post"--%>
-                                    <%--                           modelAttribute="typeForm">--%>
-                                    <%--                    <form:hidden path="tID" value="${item.watchTypeID}"/>--%>
-                                    <%--                    <input type="submit" value="Delete">--%>
-                                    <%--                    <form:errors path="tID" cssClass="error"/>--%>
-                                    <%--                </form:form>--%>
-                                    <%--            </td>--%>
+                                <td>
+                                    <form:form action="product/delete-material-submit/${item.materialID}" method="post"
+                                               modelAttribute="materialForm">
+                                        <form:hidden path="mID" value="${item.materialID}"/>
+                                        <input type="submit" value="Delete">
+                                        <form:errors path="mID" cssClass="error"/>
+                                    </form:form>
+                                </td>
                             </tr>
                         </c:forEach>
-</tbody>
+                        </tbody>
                     </table>
                 </div>
             </div>
+        </div>
+        <div class="col-sm-6 col-md-6 col-lg-6 col-xl-6">
+            <form:form action="${pageContext.request.contextPath}/admin/product/add-material-submit" method="post"
+                       modelAttribute="material">
+                <div class="register-top-grid">
+                    <h2>MATERIAL</h2>
+                    <div>
+                        <span>Material ID<label>*</label></span>
+                        <form:input type="text" path="materialID"/>
+                        <form:errors path="materialID" cssClass="error"/>
+                    </div>
+                    <div>
+                        <span>Material Name<label>*</label></span>
+                        <form:input type="text" path="materialName"/>
+                        <form:errors path="materialName" cssClass="error"/>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="clearfix"></div>
+                <div class="register-button">
+                    <input type="submit" value="Add"/>
+                    <div class="clearfix"></div>
+                </div>
+            </form:form>
         </div>
     </div>
 </div>
